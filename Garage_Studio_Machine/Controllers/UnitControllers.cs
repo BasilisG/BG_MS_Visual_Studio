@@ -10,7 +10,6 @@ namespace Controllers
 {
     public partial class UnitControllers
     {
-
         //  Get Unit Details by UnitID
         public vmUnit GetUnitDetails(string recID)
         {

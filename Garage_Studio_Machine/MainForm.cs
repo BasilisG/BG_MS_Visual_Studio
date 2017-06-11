@@ -40,6 +40,13 @@ namespace Models
             vatList_form.ShowDialog();
         }
 
+        private void επαγγέλματαToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProffesionsList proffesionList_form = new frmProffesionsList();
+            proffesionList_form.ShowDialog();
+        }
+
+
         private void toolStripSeparator1_Click(object sender, EventArgs e)
         {
             frmItemsList itemList_frm = new frmItemsList();
@@ -60,5 +67,11 @@ namespace Models
                 System.Environment.Exit(1);
             }
         }
+
+        private void πελάτεςToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

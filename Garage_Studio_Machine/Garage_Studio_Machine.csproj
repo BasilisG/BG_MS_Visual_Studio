@@ -91,6 +91,18 @@
     <Compile Include="Forms\frmItemsList.Designer.cs">
       <DependentUpon>frmItemsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmProffesionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProffesionDetails.Designer.cs">
+      <DependentUpon>frmProffesionDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProffesionsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProffesionsList.Designer.cs">
+      <DependentUpon>frmProffesionsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmUnitDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     <EmbeddedResource Include="Forms\frmItemsList.resx">
       <DependentUpon>frmItemsList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProffesionDetails.resx">
+      <DependentUpon>frmProffesionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProffesionsList.resx">
+      <DependentUpon>frmProffesionsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUnitDetails.resx">
       <DependentUpon>frmUnitDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +260,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ViewModels.vmItem.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmItemType.datasource" />
+    <None Include="Properties\DataSources\ViewModels.vmProffesion.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmUnit.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmVat.datasource" />
     <None Include="Properties\Settings.settings">

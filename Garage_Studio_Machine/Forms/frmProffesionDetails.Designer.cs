@@ -1,6 +1,6 @@
 ﻿namespace GSMForms
 {
-    partial class frmUnitDetails
+    partial class frmProffesionDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -29,54 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnitDetails));
-            this.lblCode = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCode = new DevExpress.XtraEditors.TextEdit();
-            this.txtDescription = new DevExpress.XtraEditors.TextEdit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProffesionDetails));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.txtDescription = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.bsMain = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCode
-            // 
-            this.lblCode.Location = new System.Drawing.Point(12, 41);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(39, 13);
-            this.lblCode.TabIndex = 0;
-            this.lblCode.Text = "Κωδικός";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 70);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(52, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Περιγραφή";
-            // 
-            // txtCode
-            // 
-            this.txtCode.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Code", true));
-            this.txtCode.Location = new System.Drawing.Point(106, 34);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(100, 20);
-            this.txtCode.TabIndex = 4;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Description", true));
-            this.txtDescription.Location = new System.Drawing.Point(106, 63);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(251, 20);
-            this.txtDescription.TabIndex = 5;
-            this.txtDescription.EditValueChanged += new System.EventHandler(this.txtDescription_EditValueChanged);
             // 
             // panelControl1
             // 
@@ -86,7 +50,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 171);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(384, 40);
-            this.panelControl1.TabIndex = 6;
+            this.panelControl1.TabIndex = 7;
             // 
             // btnCancel
             // 
@@ -112,28 +76,40 @@
             this.btnSave.Text = "Αποθήκευση";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // txtDescription
+            // 
+            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Description", true));
+            this.txtDescription.Location = new System.Drawing.Point(106, 53);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(266, 20);
+            this.txtDescription.TabIndex = 9;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 60);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(52, 13);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "Περιγραφή";
+            // 
             // bsMain
             // 
-            this.bsMain.DataSource = typeof(ViewModels.vmUnit);
+            this.bsMain.DataSource = typeof(ViewModels.vmProffesion);
             // 
-            // frmUnitDetails
+            // frmProffesionDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 211);
-            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.lblCode);
-            this.Name = "frmUnitDetails";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Μονάδα Μέτρησης";
-            this.Load += new System.EventHandler(this.frmUnitDetails_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
+            this.Controls.Add(this.panelControl1);
+            this.Name = "frmProffesionDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Επάγγελμα";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,13 +118,11 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl lblCode;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtCode;
-        private DevExpress.XtraEditors.TextEdit txtDescription;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.TextEdit txtDescription;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.BindingSource bsMain;
     }
 }
