@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16125208-4E98-4430-AF52-47D4734BE2B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Models</RootNamespace>
+    <AssemblyName>Garage_Studio_Machine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ItemControllers.cs" />
+    <Compile Include="Controllers\ItemTypeControllers.cs" />
+    <Compile Include="Controllers\ProffesionControllers.cs" />
+    <Compile Include="Controllers\UnitControllers.cs" />
+    <Compile Include="Controllers\VatControllers.cs" />
+    <Compile Include="Forms\frmItemDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmItemDetails.Designer.cs">
+      <DependentUpon>frmItemDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmItemsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmItemsList.Designer.cs">
+      <DependentUpon>frmItemsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUnitDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUnitDetails.Designer.cs">
+      <DependentUpon>frmUnitDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUnitsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUnitsList.Designer.cs">
+      <DependentUpon>frmUnitsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVatDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVatDetails.Designer.cs">
+      <DependentUpon>frmVatDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVatsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVatsList.Designer.cs">
+      <DependentUpon>frmVatsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GarageContext.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705270603500_Initial.cs" />
+    <Compile Include="Migrations\201705270603500_Initial.Designer.cs">
+      <DependentUpon>201705270603500_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705270606118_Garage_Studio_Machine_CF.cs" />
+    <Compile Include="Migrations\201705270606118_Garage_Studio_Machine_CF.Designer.cs">
+      <DependentUpon>201705270606118_Garage_Studio_Machine_CF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705271245481_Garage_Studio_Machine_CF1.cs" />
+    <Compile Include="Migrations\201705271245481_Garage_Studio_Machine_CF1.Designer.cs">
+      <DependentUpon>201705271245481_Garage_Studio_Machine_CF1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705271246587_Garage_Studio_Machine_CF2.cs" />
+    <Compile Include="Migrations\201705271246587_Garage_Studio_Machine_CF2.Designer.cs">
+      <DependentUpon>201705271246587_Garage_Studio_Machine_CF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021549289_Garage_Studio_Machine_CF3.cs" />
+    <Compile Include="Migrations\201706021549289_Garage_Studio_Machine_CF3.Designer.cs">
+      <DependentUpon>201706021549289_Garage_Studio_Machine_CF3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021550437_Garage_Studio_Machine_CF4.cs" />
+    <Compile Include="Migrations\201706021550437_Garage_Studio_Machine_CF4.Designer.cs">
+      <DependentUpon>201706021550437_Garage_Studio_Machine_CF4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021603030_Garage_Studio_Machine_CF5.cs" />
+    <Compile Include="Migrations\201706021603030_Garage_Studio_Machine_CF5.Designer.cs">
+      <DependentUpon>201706021603030_Garage_Studio_Machine_CF5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021604093_Garage_Studio_Machine_CF6.cs" />
+    <Compile Include="Migrations\201706021604093_Garage_Studio_Machine_CF6.Designer.cs">
+      <DependentUpon>201706021604093_Garage_Studio_Machine_CF6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706021610356_Garage_Studio_Machine_CF7.cs" />
+    <Compile Include="Migrations\201706021610356_Garage_Studio_Machine_CF7.Designer.cs">
+      <DependentUpon>201706021610356_Garage_Studio_Machine_CF7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.cs" />
+    <Compile Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.Designer.cs">
+      <DependentUpon>201706081935365_Garage_Studio_Machine_CF8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemType.cs" />
+    <Compile Include="Models\Proffesion.cs" />
+    <Compile Include="Models\Unit.cs" />
+    <Compile Include="Models\Vat.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\vmItem.cs" />
+    <Compile Include="ViewModels\vmItemType.cs" />
+    <Compile Include="ViewModels\vmProffesion.cs" />
+    <Compile Include="ViewModels\vmUnit.cs" />
+    <Compile Include="ViewModels\vmVat.cs" />
+    <EmbeddedResource Include="Forms\frmItemDetails.resx">
+      <DependentUpon>frmItemDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmItemsList.resx">
+      <DependentUpon>frmItemsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUnitDetails.resx">
+      <DependentUpon>frmUnitDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUnitsList.resx">
+      <DependentUpon>frmUnitsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVatDetails.resx">
+      <DependentUpon>frmVatDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVatsList.resx">
+      <DependentUpon>frmVatsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705270603500_Initial.resx">
+      <DependentUpon>201705270603500_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705270606118_Garage_Studio_Machine_CF.resx">
+      <DependentUpon>201705270606118_Garage_Studio_Machine_CF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705271245481_Garage_Studio_Machine_CF1.resx">
+      <DependentUpon>201705271245481_Garage_Studio_Machine_CF1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705271246587_Garage_Studio_Machine_CF2.resx">
+      <DependentUpon>201705271246587_Garage_Studio_Machine_CF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021549289_Garage_Studio_Machine_CF3.resx">
+      <DependentUpon>201706021549289_Garage_Studio_Machine_CF3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021550437_Garage_Studio_Machine_CF4.resx">
+      <DependentUpon>201706021550437_Garage_Studio_Machine_CF4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021603030_Garage_Studio_Machine_CF5.resx">
+      <DependentUpon>201706021603030_Garage_Studio_Machine_CF5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021604093_Garage_Studio_Machine_CF6.resx">
+      <DependentUpon>201706021604093_Garage_Studio_Machine_CF6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706021610356_Garage_Studio_Machine_CF7.resx">
+      <DependentUpon>201706021610356_Garage_Studio_Machine_CF7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.resx">
+      <DependentUpon>201706081935365_Garage_Studio_Machine_CF8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ViewModels.vmItem.datasource" />
+    <None Include="Properties\DataSources\ViewModels.vmItemType.datasource" />
+    <None Include="Properties\DataSources\ViewModels.vmUnit.datasource" />
+    <None Include="Properties\DataSources\ViewModels.vmVat.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superbile_002.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
