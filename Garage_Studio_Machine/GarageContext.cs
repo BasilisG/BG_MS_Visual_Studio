@@ -26,6 +26,7 @@ namespace Models
         public DbSet<Proffesion> Proffesions { get; set; }
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemType> ItemTypes { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

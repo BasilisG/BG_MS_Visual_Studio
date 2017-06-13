@@ -74,11 +74,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CustomerControllers.cs" />
     <Compile Include="Controllers\ItemControllers.cs" />
     <Compile Include="Controllers\ItemTypeControllers.cs" />
     <Compile Include="Controllers\ProffesionControllers.cs" />
     <Compile Include="Controllers\UnitControllers.cs" />
     <Compile Include="Controllers\VatControllers.cs" />
+    <Compile Include="Forms\frmCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomerDetails.Designer.cs">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmItemDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,8 +181,13 @@
     <Compile Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.Designer.cs">
       <DependentUpon>201706081935365_Garage_Studio_Machine_CF8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.cs" />
+    <Compile Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.Designer.cs">
+      <DependentUpon>201706131541020_Garage_Studio_Machine_CF9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemType.cs" />
     <Compile Include="Models\Proffesion.cs" />
@@ -184,11 +196,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\vmCustomer.cs" />
     <Compile Include="ViewModels\vmItem.cs" />
     <Compile Include="ViewModels\vmItemType.cs" />
     <Compile Include="ViewModels\vmProffesion.cs" />
     <Compile Include="ViewModels\vmUnit.cs" />
     <Compile Include="ViewModels\vmVat.cs" />
+    <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
+      <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmItemDetails.resx">
       <DependentUpon>frmItemDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +262,9 @@
     <EmbeddedResource Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.resx">
       <DependentUpon>201706081935365_Garage_Studio_Machine_CF8.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.resx">
+      <DependentUpon>201706131541020_Garage_Studio_Machine_CF9.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -258,6 +277,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Controllers.CustomerControllers.datasource" />
+    <None Include="Properties\DataSources\ViewModels.vmCustomer.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmItem.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmItemType.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmProffesion.datasource" />

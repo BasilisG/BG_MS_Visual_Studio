@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.bsMain = new System.Windows.Forms.BindingSource(this.components);
@@ -53,8 +53,8 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.btnDelete);
             this.panelControl1.Controls.Add(this.btnUpdate);
+            this.panelControl1.Controls.Add(this.btnDelete);
             this.panelControl1.Controls.Add(this.btnInsert);
             this.panelControl1.Controls.Add(this.btnLoad);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -63,23 +63,23 @@
             this.panelControl1.Size = new System.Drawing.Size(143, 461);
             this.panelControl1.TabIndex = 1;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(9, 136);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(124, 23);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Μεταβολή";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(9, 167);
+            this.btnDelete.Location = new System.Drawing.Point(9, 165);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(124, 23);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Διαγραφή";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(9, 137);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(124, 23);
-            this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Μεταβολή";
-            this.btnUpdate.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnInsert
             // 
@@ -127,6 +127,7 @@
             this.colTag});
             this.gridVwMain.GridControl = this.gridMain;
             this.gridVwMain.Name = "gridVwMain";
+            this.gridVwMain.OptionsBehavior.ReadOnly = true;
             // 
             // colDescription
             // 
@@ -188,7 +189,6 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnInsert;
         private DevExpress.XtraEditors.SimpleButton btnLoad;
         private System.Windows.Forms.BindingSource bsMain;
@@ -201,5 +201,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colRowStatus;
         private DevExpress.XtraGrid.Columns.GridColumn colSelected;
         private DevExpress.XtraGrid.Columns.GridColumn colTag;
+        private DevExpress.XtraEditors.SimpleButton btnUpdate;
     }
 }

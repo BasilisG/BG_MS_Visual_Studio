@@ -170,7 +170,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 521);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(582, 40);
+            this.panelControl1.Size = new System.Drawing.Size(584, 40);
             this.panelControl1.TabIndex = 6;
             // 
             // btnCancel
@@ -178,7 +178,7 @@
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(334, 2);
+            this.btnCancel.Location = new System.Drawing.Point(336, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(117, 36);
             this.btnCancel.TabIndex = 4;
@@ -190,7 +190,7 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(451, 2);
+            this.btnSave.Location = new System.Drawing.Point(453, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(129, 36);
             this.btnSave.TabIndex = 3;
@@ -201,7 +201,7 @@
             // 
             this.checkEdit_isActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEdit_isActive.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "isActive", true));
-            this.checkEdit_isActive.Location = new System.Drawing.Point(495, 34);
+            this.checkEdit_isActive.Location = new System.Drawing.Point(497, 34);
             this.checkEdit_isActive.Name = "checkEdit_isActive";
             this.checkEdit_isActive.Properties.Caption = "Ενεργό";
             this.checkEdit_isActive.Size = new System.Drawing.Size(75, 19);
@@ -237,7 +237,7 @@
             this.panel1.Controls.Add(this.xtraTabControl1);
             this.panel1.Location = new System.Drawing.Point(0, 187);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(580, 330);
+            this.panel1.Size = new System.Drawing.Size(582, 330);
             this.panel1.TabIndex = 12;
             // 
             // xtraTabControl1
@@ -246,7 +246,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(580, 330);
+            this.xtraTabControl1.Size = new System.Drawing.Size(582, 330);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -276,7 +276,7 @@
             this.xtraTabPage1.Controls.Add(this.labelControl2);
             this.xtraTabPage1.Controls.Add(this.textEdit4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(574, 302);
+            this.xtraTabPage1.Size = new System.Drawing.Size(576, 302);
             this.xtraTabPage1.Text = "Τιμές";
             // 
             // textEdit13
@@ -687,7 +687,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 561);
+            this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.lblUnitAID);
             this.Controls.Add(this.lblVatID);
             this.Controls.Add(this.lblItemType);
