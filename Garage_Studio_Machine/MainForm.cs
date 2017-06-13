@@ -53,6 +53,12 @@ namespace Models
             itemList_frm.ShowDialog();
         }
 
+        private void πελάτεςToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCustomersList customerList_frm = new frmCustomersList();
+            customerList_frm.ShowDialog();
+        }
+
         private void εξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Exit Application Code
@@ -68,10 +74,7 @@ namespace Models
             }
         }
 
-        private void πελάτεςToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
 
     }
 }

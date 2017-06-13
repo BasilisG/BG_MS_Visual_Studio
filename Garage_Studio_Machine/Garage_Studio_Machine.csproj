@@ -86,6 +86,12 @@
     <Compile Include="Forms\frmCustomerDetails.Designer.cs">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCustomersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomersList.Designer.cs">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmItemDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <Compile Include="ViewModels\vmVat.cs" />
     <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomersList.resx">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmItemDetails.resx">
       <DependentUpon>frmItemDetails.cs</DependentUpon>

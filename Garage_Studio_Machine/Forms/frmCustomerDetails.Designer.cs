@@ -106,11 +106,11 @@
             // 
             // bsMain
             // 
-            this.bsMain.DataSource = typeof(Controllers.CustomerControllers);
+            this.bsMain.DataSource = typeof(ViewModels.vmCustomer);
             // 
             // txtCode
             // 
-            this.txtCode.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "Code", true));
+            this.txtCode.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Code", true));
             this.txtCode.Location = new System.Drawing.Point(114, 42);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(160, 20);
@@ -162,7 +162,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "TaxName", true));
+            this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "TaxName", true));
             this.textEdit1.Location = new System.Drawing.Point(114, 77);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(342, 20);
@@ -170,7 +170,7 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "TaxNumber", true));
+            this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "TaxNumber", true));
             this.textEdit2.Location = new System.Drawing.Point(114, 112);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Size = new System.Drawing.Size(160, 20);
@@ -178,7 +178,7 @@
             // 
             // textEdit3
             // 
-            this.textEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "FirstName", true));
+            this.textEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "FirstName", true));
             this.textEdit3.Location = new System.Drawing.Point(114, 148);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Size = new System.Drawing.Size(342, 20);
@@ -186,7 +186,7 @@
             // 
             // textEdit4
             // 
-            this.textEdit4.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "LastName", true));
+            this.textEdit4.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "LastName", true));
             this.textEdit4.Location = new System.Drawing.Point(114, 183);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(342, 20);
@@ -202,7 +202,7 @@
             // 
             // textEdit11
             // 
-            this.textEdit11.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrPhone1", true));
+            this.textEdit11.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrPhone1", true));
             this.textEdit11.Location = new System.Drawing.Point(118, 22);
             this.textEdit11.Name = "textEdit11";
             this.textEdit11.Size = new System.Drawing.Size(160, 20);
@@ -218,7 +218,7 @@
             // 
             // textEdit12
             // 
-            this.textEdit12.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrPhone2", true));
+            this.textEdit12.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrPhone2", true));
             this.textEdit12.Location = new System.Drawing.Point(118, 54);
             this.textEdit12.Name = "textEdit12";
             this.textEdit12.Size = new System.Drawing.Size(160, 20);
@@ -234,7 +234,7 @@
             // 
             // textEdit13
             // 
-            this.textEdit13.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrPhone3", true));
+            this.textEdit13.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrPhone3", true));
             this.textEdit13.Location = new System.Drawing.Point(118, 90);
             this.textEdit13.Name = "textEdit13";
             this.textEdit13.Size = new System.Drawing.Size(160, 20);
@@ -250,7 +250,7 @@
             // 
             // textEdit14
             // 
-            this.textEdit14.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrFax", true));
+            this.textEdit14.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrFax", true));
             this.textEdit14.Location = new System.Drawing.Point(118, 123);
             this.textEdit14.Name = "textEdit14";
             this.textEdit14.Size = new System.Drawing.Size(160, 20);
@@ -266,7 +266,7 @@
             // 
             // textEdit15
             // 
-            this.textEdit15.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrEmail", true));
+            this.textEdit15.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrEmail", true));
             this.textEdit15.Location = new System.Drawing.Point(118, 154);
             this.textEdit15.Name = "textEdit15";
             this.textEdit15.Size = new System.Drawing.Size(335, 20);
@@ -285,9 +285,9 @@
             this.panelControl1.Controls.Add(this.btnCancel);
             this.panelControl1.Controls.Add(this.btnSave);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 571);
+            this.panelControl1.Location = new System.Drawing.Point(0, 575);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(584, 40);
+            this.panelControl1.Size = new System.Drawing.Size(541, 40);
             this.panelControl1.TabIndex = 37;
             // 
             // btnCancel
@@ -295,7 +295,7 @@
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(336, 2);
+            this.btnCancel.Location = new System.Drawing.Point(293, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(117, 36);
             this.btnCancel.TabIndex = 4;
@@ -307,7 +307,7 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(453, 2);
+            this.btnSave.Location = new System.Drawing.Point(410, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(129, 36);
             this.btnSave.TabIndex = 3;
@@ -318,10 +318,10 @@
             // 
             this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl1.Location = new System.Drawing.Point(2, 266);
+            this.xtraTabControl1.Location = new System.Drawing.Point(2, 270);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(582, 311);
+            this.xtraTabControl1.Size = new System.Drawing.Size(539, 311);
             this.xtraTabControl1.TabIndex = 38;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -341,12 +341,12 @@
             this.xtraTabPage1.Controls.Add(this.textEdit6);
             this.xtraTabPage1.Controls.Add(this.labelControl5);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(576, 283);
+            this.xtraTabPage1.Size = new System.Drawing.Size(533, 283);
             this.xtraTabPage1.Text = "Διεύθυνση";
             // 
             // textEdit10
             // 
-            this.textEdit10.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrZipCode", true));
+            this.textEdit10.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrZipCode", true));
             this.textEdit10.Location = new System.Drawing.Point(84, 180);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Size = new System.Drawing.Size(160, 20);
@@ -362,7 +362,7 @@
             // 
             // textEdit9
             // 
-            this.textEdit9.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrDistrict", true));
+            this.textEdit9.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrDistrict", true));
             this.textEdit9.Location = new System.Drawing.Point(84, 142);
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Size = new System.Drawing.Size(342, 20);
@@ -378,7 +378,7 @@
             // 
             // textEdit8
             // 
-            this.textEdit8.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrCity", true));
+            this.textEdit8.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrCity", true));
             this.textEdit8.Location = new System.Drawing.Point(84, 103);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Size = new System.Drawing.Size(342, 20);
@@ -386,7 +386,7 @@
             // 
             // textEdit7
             // 
-            this.textEdit7.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrNumber", true));
+            this.textEdit7.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrNumber", true));
             this.textEdit7.Location = new System.Drawing.Point(84, 69);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Size = new System.Drawing.Size(160, 20);
@@ -410,7 +410,7 @@
             // 
             // textEdit6
             // 
-            this.textEdit6.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AdrStreet", true));
+            this.textEdit6.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AdrStreet", true));
             this.textEdit6.Location = new System.Drawing.Point(84, 35);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Size = new System.Drawing.Size(342, 20);
@@ -437,7 +437,7 @@
             this.xtraTabPage2.Controls.Add(this.labelControl13);
             this.xtraTabPage2.Controls.Add(this.textEdit13);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(576, 283);
+            this.xtraTabPage2.Size = new System.Drawing.Size(533, 283);
             this.xtraTabPage2.Text = "Επικοινωνία";
             // 
             // xtraTabPage3
@@ -447,7 +447,7 @@
             this.xtraTabPage3.Controls.Add(this.textEdit17);
             this.xtraTabPage3.Controls.Add(this.textEdit16);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(576, 283);
+            this.xtraTabPage3.Size = new System.Drawing.Size(533, 283);
             this.xtraTabPage3.Text = "Λοιπά";
             // 
             // labelControl16
@@ -468,7 +468,7 @@
             // 
             // textEdit17
             // 
-            this.textEdit17.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "Comment", true));
+            this.textEdit17.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Comment", true));
             this.textEdit17.Location = new System.Drawing.Point(130, 22);
             this.textEdit17.Name = "textEdit17";
             this.textEdit17.Size = new System.Drawing.Size(394, 145);
@@ -476,7 +476,7 @@
             // 
             // textEdit16
             // 
-            this.textEdit16.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "AlertMessage", true));
+            this.textEdit16.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "AlertMessage", true));
             this.textEdit16.Location = new System.Drawing.Point(130, 188);
             this.textEdit16.Name = "textEdit16";
             this.textEdit16.Size = new System.Drawing.Size(394, 90);
@@ -484,7 +484,7 @@
             // 
             // textEdit5
             // 
-            this.textEdit5.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsProffesion, "ProffesionID", true));
+            this.textEdit5.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "ProffesionID", true));
             this.textEdit5.Location = new System.Drawing.Point(114, 220);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -500,7 +500,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 611);
+            this.ClientSize = new System.Drawing.Size(541, 615);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.labelControl8);

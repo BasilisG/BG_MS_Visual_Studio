@@ -47,6 +47,8 @@
             this.repositoryItemLookUpUNI = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.bsUnit = new System.Windows.Forms.BindingSource(this.components);
             this.colVatID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpVAT = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.bsVat = new System.Windows.Forms.BindingSource(this.components);
             this.colCostPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLastCostPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGrossPrice = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,8 +72,7 @@
             this.colRowStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelected = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTag = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bsVat = new System.Windows.Forms.BindingSource(this.components);
-            this.repositoryItemLookUpVAT = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colUserID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
@@ -80,8 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckisActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpUNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUnit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsVat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpVAT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVat)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -184,7 +185,8 @@
             this.colErrorMessage,
             this.colRowStatus,
             this.colSelected,
-            this.colTag});
+            this.colTag,
+            this.colUserID});
             this.gridVwMain.GridControl = this.gridMain;
             this.gridVwMain.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridVwMain.Name = "gridVwMain";
@@ -275,6 +277,20 @@
             this.colVatID.Visible = true;
             this.colVatID.VisibleIndex = 5;
             this.colVatID.Width = 113;
+            // 
+            // repositoryItemLookUpVAT
+            // 
+            this.repositoryItemLookUpVAT.AutoHeight = false;
+            this.repositoryItemLookUpVAT.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpVAT.DataSource = this.bsVat;
+            this.repositoryItemLookUpVAT.DisplayMember = "Description";
+            this.repositoryItemLookUpVAT.Name = "repositoryItemLookUpVAT";
+            this.repositoryItemLookUpVAT.ValueMember = "VatID";
+            // 
+            // bsVat
+            // 
+            this.bsVat.DataSource = typeof(ViewModels.vmVat);
             // 
             // colCostPrice
             // 
@@ -447,19 +463,10 @@
             this.colTag.Name = "colTag";
             this.colTag.Width = 38;
             // 
-            // bsVat
+            // colUserID
             // 
-            this.bsVat.DataSource = typeof(ViewModels.vmVat);
-            // 
-            // repositoryItemLookUpVAT
-            // 
-            this.repositoryItemLookUpVAT.AutoHeight = false;
-            this.repositoryItemLookUpVAT.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpVAT.DataSource = this.bsVat;
-            this.repositoryItemLookUpVAT.DisplayMember = "Description";
-            this.repositoryItemLookUpVAT.Name = "repositoryItemLookUpVAT";
-            this.repositoryItemLookUpVAT.ValueMember = "VatID";
+            this.colUserID.FieldName = "UserID";
+            this.colUserID.Name = "colUserID";
             // 
             // frmItemsList
             // 
@@ -479,8 +486,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckisActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpUNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsUnit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsVat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpVAT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,5 +537,6 @@
         private System.Windows.Forms.BindingSource bsUnit;
         private System.Windows.Forms.BindingSource bsVat;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpVAT;
+        private DevExpress.XtraGrid.Columns.GridColumn colUserID;
     }
 }
