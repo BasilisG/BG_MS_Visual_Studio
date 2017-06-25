@@ -489,6 +489,8 @@
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit5.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 63, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.textEdit5.Properties.DataSource = this.bsProffesion;
             this.textEdit5.Properties.DisplayMember = "Description";
             this.textEdit5.Properties.NullText = "";
