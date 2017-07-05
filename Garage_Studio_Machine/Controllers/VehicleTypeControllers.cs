@@ -8,52 +8,55 @@ using Models;
 
 namespace Controllers
 {
-    public partial class CustomerControllers
+    public partial class VehicleTypeControllers
     {
-        // Get Customer Details by CustomerID
-        public vmCustomer GetCustomerDetails(string recID)
+
+        // Get VehicleType Details by VehicleTypeID
+
+        public vmVehicleType GetVehicleTypeDetails(string recID)
         {
             try
             {
                 using (GarageContext ctx = new GarageContext())
                 {
-                    var ans = ctx.Customers.AsNoTracking()
-                        .FirstOrDefault(x => x.CustomerID == new Guid(recID));
+                    var ans = ctx.VehicleTypes.AsNoTracking()
+                        .FirstOrDefault(x => x.VehicleTypeID == new Guid(recID));
                     if (ans == null) return null;
 
                     return ans.ToViewModel();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+
                 throw;
             }
         }
 
-        // Get Customers List
-        public vmCustomer[] GetCustomersList()
+        // Get VehicleTypes List
+        public vmVehicleType[] GetVehicleTypesList()
         {
             try
             {
                 using (GarageContext ctx = new GarageContext())
                 {
-                    IQueryable<Customer> oList = ctx.Customers.AsNoTracking();
-                    oList = oList.Take(500);
+                    IQueryable<VehicleType> oList = ctx.VehicleTypes.AsNoTracking();
+                    oList = oList.Take(100);
                     var ans = oList.ToArray().Select(x => x.ToViewModel()).ToArray();
                     return ans;
                 }
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
-        // Update / Post Customer
-        public bool UpdateCustomer(vmCustomer vm)
+        // Post VehicleType 
+        public bool UpdateVehicleType(vmVehicleType vm)
         {
-            Customer rec;
+            VehicleType rec;
             try
             {
                 using (GarageContext ctx = new GarageContext())
@@ -64,7 +67,7 @@ namespace Controllers
                         case RecordMode.Added:
                             try
                             {
-                                ctx.Customers.Add(new Customer().FromViewModel(vm));
+                                ctx.VehicleTypes.Add(new VehicleType().FromViewModel(vm));
                                 res = true;
                             }
                             catch (Exception ex)
@@ -75,7 +78,7 @@ namespace Controllers
                             break;
                         case RecordMode.Modified:
 
-                            rec = ctx.Customers.FirstOrDefault(x => x.CustomerID == vm.CustomerID);
+                            rec = ctx.VehicleTypes.FirstOrDefault(x => x.VehicleTypeID == vm.VehicleTypeID);
                             if (rec == null)
                                 return res = false;
                             rec.FromViewModel(vm);
@@ -83,12 +86,12 @@ namespace Controllers
                             break;
 
                         case RecordMode.Deleted:
-                            rec = ctx.Customers.FirstOrDefault(x => x.CustomerID == vm.CustomerID);
+                            rec = ctx.VehicleTypes.FirstOrDefault(x => x.VehicleTypeID == vm.VehicleTypeID);
                             if (rec == null)
                                 res = false;
                             //                            
-                            ctx.Customers.Attach(rec);
-                            ctx.Customers.Remove(rec);
+                            ctx.VehicleTypes.Attach(rec);
+                            ctx.VehicleTypes.Remove(rec);
                             res = true;
                             break;
                     }
@@ -96,13 +99,13 @@ namespace Controllers
                     return res;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+
                 return false;
                 //return Failure("Η ενημέρωση των στοιχείων του Σκάφους απέτυχε.\nΑιτία : " + ex.Message);
             }
         }
-
-
     }
 }
+

@@ -1,4 +1,4 @@
-﻿namespace Models
+﻿namespace ViewModels
 {
     partial class MainForm
     {
@@ -138,7 +138,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Models.Properties.Resources.superbile_002;
+            this.pictureBox1.Image = global::ViewModels.Properties.Resources.superbile_002;
             this.pictureBox1.Location = new System.Drawing.Point(12, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1012, 575);

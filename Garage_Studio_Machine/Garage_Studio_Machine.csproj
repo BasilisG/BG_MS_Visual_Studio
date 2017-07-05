@@ -7,7 +7,7 @@
     <ProjectGuid>{16125208-4E98-4430-AF52-47D4734BE2B7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Models</RootNamespace>
+    <RootNamespace>ViewModels</RootNamespace>
     <AssemblyName>Garage_Studio_Machine</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -74,12 +74,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ColorControllers.cs" />
     <Compile Include="Controllers\CustomerControllers.cs" />
     <Compile Include="Controllers\ItemControllers.cs" />
     <Compile Include="Controllers\ItemTypeControllers.cs" />
     <Compile Include="Controllers\ProffesionControllers.cs" />
     <Compile Include="Controllers\UnitControllers.cs" />
     <Compile Include="Controllers\VatControllers.cs" />
+    <Compile Include="Controllers\VehicleTypeControllers.cs" />
     <Compile Include="Forms\frmCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,23 +193,39 @@
     <Compile Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.Designer.cs">
       <DependentUpon>201706131541020_Garage_Studio_Machine_CF9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706250631078_Garage_Studio_Machine_CF10.cs" />
+    <Compile Include="Migrations\201706250631078_Garage_Studio_Machine_CF10.Designer.cs">
+      <DependentUpon>201706250631078_Garage_Studio_Machine_CF10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706250651187_Garage_Studio_Machine_CF.cs" />
+    <Compile Include="Migrations\201706250651187_Garage_Studio_Machine_CF.Designer.cs">
+      <DependentUpon>201706250651187_Garage_Studio_Machine_CF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.cs" />
+    <Compile Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.Designer.cs">
+      <DependentUpon>201706250700132_Garage_Studio_Machine_CF1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemType.cs" />
     <Compile Include="Models\Proffesion.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\Vat.cs" />
+    <Compile Include="Models\VehicleType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\vmColor.cs" />
     <Compile Include="ViewModels\vmCustomer.cs" />
     <Compile Include="ViewModels\vmItem.cs" />
     <Compile Include="ViewModels\vmItemType.cs" />
     <Compile Include="ViewModels\vmProffesion.cs" />
     <Compile Include="ViewModels\vmUnit.cs" />
     <Compile Include="ViewModels\vmVat.cs" />
+    <Compile Include="ViewModels\vmVehicleType.cs" />
     <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +291,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.resx">
       <DependentUpon>201706131541020_Garage_Studio_Machine_CF9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250631078_Garage_Studio_Machine_CF10.resx">
+      <DependentUpon>201706250631078_Garage_Studio_Machine_CF10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250651187_Garage_Studio_Machine_CF.resx">
+      <DependentUpon>201706250651187_Garage_Studio_Machine_CF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.resx">
+      <DependentUpon>201706250700132_Garage_Studio_Machine_CF1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

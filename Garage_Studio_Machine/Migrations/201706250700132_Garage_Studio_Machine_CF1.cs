@@ -1,32 +1,32 @@
-namespace ViewModels.Migrations
+namespace Models.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Garage_Studio_Machine_CF4 : DbMigration
+    public partial class Garage_Studio_Machine_CF1 : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.ItemType",
+                "dbo.VehicleType",
                 c => new
                     {
-                        ItemTypeID = c.Guid(nullable: false),
+                        VehicleTypeID = c.Guid(nullable: false),
                         Code = c.String(nullable: false, maxLength: 50),
                         Description = c.String(nullable: false, maxLength: 100),
                         Date_Ins = c.DateTime(),
                         Date_Upd = c.DateTime(),
                         RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
                     })
-                .PrimaryKey(t => t.ItemTypeID)
-                .Index(t => t.Code, unique: true, name: "IDX_ItemType_Code");
+                .PrimaryKey(t => t.VehicleTypeID)
+                .Index(t => t.Code, unique: true, name: "IDX_VehicleType_Code");
             
         }
         
         public override void Down()
         {
-            DropIndex("dbo.ItemType", "IDX_ItemType_Code");
-            DropTable("dbo.ItemType");
+            DropIndex("dbo.VehicleType", "IDX_VehicleType_Code");
+            DropTable("dbo.VehicleType");
         }
     }
 }

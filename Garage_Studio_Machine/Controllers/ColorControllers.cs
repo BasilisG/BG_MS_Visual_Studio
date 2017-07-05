@@ -8,52 +8,55 @@ using Models;
 
 namespace Controllers
 {
-    public partial class CustomerControllers
+    public partial class ColorControllers
     {
-        // Get Customer Details by CustomerID
-        public vmCustomer GetCustomerDetails(string recID)
+
+        // Get Color Details by ColorID
+
+        public vmColor GetColorDetails(string recID)
         {
             try
             {
                 using (GarageContext ctx = new GarageContext())
                 {
-                    var ans = ctx.Customers.AsNoTracking()
-                        .FirstOrDefault(x => x.CustomerID == new Guid(recID));
+                    var ans = ctx.Colors.AsNoTracking()
+                        .FirstOrDefault(x => x.ColorID == new Guid(recID));
                     if (ans == null) return null;
 
                     return ans.ToViewModel();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+
                 throw;
             }
         }
 
-        // Get Customers List
-        public vmCustomer[] GetCustomersList()
+        // Get Colors List
+        public vmColor[] GetColorsList()
         {
             try
             {
                 using (GarageContext ctx = new GarageContext())
                 {
-                    IQueryable<Customer> oList = ctx.Customers.AsNoTracking();
-                    oList = oList.Take(500);
+                    IQueryable<Color> oList = ctx.Colors.AsNoTracking();
+                    oList = oList.Take(100);
                     var ans = oList.ToArray().Select(x => x.ToViewModel()).ToArray();
                     return ans;
                 }
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
-        // Update / Post Customer
-        public bool UpdateCustomer(vmCustomer vm)
+        // Post Color 
+        public bool UpdateColor(vmColor vm)
         {
-            Customer rec;
+            Color rec;
             try
             {
                 using (GarageContext ctx = new GarageContext())
@@ -64,7 +67,7 @@ namespace Controllers
                         case RecordMode.Added:
                             try
                             {
-                                ctx.Customers.Add(new Customer().FromViewModel(vm));
+                                ctx.Colors.Add(new Color().FromViewModel(vm));
                                 res = true;
                             }
                             catch (Exception ex)
@@ -75,7 +78,7 @@ namespace Controllers
                             break;
                         case RecordMode.Modified:
 
-                            rec = ctx.Customers.FirstOrDefault(x => x.CustomerID == vm.CustomerID);
+                            rec = ctx.Colors.FirstOrDefault(x => x.ColorID == vm.ColorID);
                             if (rec == null)
                                 return res = false;
                             rec.FromViewModel(vm);
@@ -83,12 +86,12 @@ namespace Controllers
                             break;
 
                         case RecordMode.Deleted:
-                            rec = ctx.Customers.FirstOrDefault(x => x.CustomerID == vm.CustomerID);
+                            rec = ctx.Colors.FirstOrDefault(x => x.ColorID == vm.ColorID);
                             if (rec == null)
                                 res = false;
                             //                            
-                            ctx.Customers.Attach(rec);
-                            ctx.Customers.Remove(rec);
+                            ctx.Colors.Attach(rec);
+                            ctx.Colors.Remove(rec);
                             res = true;
                             break;
                     }
@@ -96,13 +99,12 @@ namespace Controllers
                     return res;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+
                 return false;
                 //return Failure("Η ενημέρωση των στοιχείων του Σκάφους απέτυχε.\nΑιτία : " + ex.Message);
             }
         }
-
-
     }
 }

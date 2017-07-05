@@ -7,13 +7,13 @@ namespace ViewModels.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Garage_Studio_Machine_CF2 : IMigrationMetadata
+    public sealed partial class Garage_Studio_Machine_CF10 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Garage_Studio_Machine_CF2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Garage_Studio_Machine_CF10));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705271246587_Garage_Studio_Machine_CF2"; }
+            get { return "201706250631078_Garage_Studio_Machine_CF10"; }
         }
         
         string IMigrationMetadata.Source

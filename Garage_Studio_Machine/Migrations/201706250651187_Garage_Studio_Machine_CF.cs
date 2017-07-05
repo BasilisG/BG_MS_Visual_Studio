@@ -1,9 +1,9 @@
-namespace ViewModels.Migrations
+namespace Models.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Garage_Studio_Machine_CF3 : DbMigration
+    public partial class Garage_Studio_Machine_CF : DbMigration
     {
         public override void Up()
         {

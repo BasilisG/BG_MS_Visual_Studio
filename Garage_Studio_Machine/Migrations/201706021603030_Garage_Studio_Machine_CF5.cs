@@ -1,4 +1,4 @@
-namespace Models.Migrations
+namespace ViewModels.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

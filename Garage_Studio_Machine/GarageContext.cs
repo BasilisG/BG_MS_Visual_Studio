@@ -8,7 +8,7 @@ namespace Models
     using System.Text;
     using System.Threading.Tasks;
     using System.Data.Entity;
-    using Models;
+    using ViewModels;
     using System.Data.Entity.ModelConfiguration.Conventions;
     
     public partial class GarageContext : DbContext
@@ -27,6 +27,8 @@ namespace Models
         public DbSet<Item> Items { get; set; }
         public DbSet<ItemType> ItemTypes { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<VehicleType> VehicleTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

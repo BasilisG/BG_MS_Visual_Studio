@@ -331,16 +331,12 @@
             this.colComment.Caption = "Σχόλια";
             this.colComment.FieldName = "Comment";
             this.colComment.Name = "colComment";
-            this.colComment.Visible = true;
-            this.colComment.VisibleIndex = 16;
             // 
             // colAlertMessage
             // 
             this.colAlertMessage.Caption = "Μήνυμα Κινήσεων";
             this.colAlertMessage.FieldName = "AlertMessage";
             this.colAlertMessage.Name = "colAlertMessage";
-            this.colAlertMessage.Visible = true;
-            this.colAlertMessage.VisibleIndex = 17;
             // 
             // colUserID
             // 

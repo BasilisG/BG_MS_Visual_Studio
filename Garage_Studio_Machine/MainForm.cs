@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GSMForms;
 
-namespace Models
+namespace ViewModels
 {
     public partial class MainForm : Form
     {

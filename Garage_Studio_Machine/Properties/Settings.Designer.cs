@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Models.Properties {
+namespace ViewModels.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
