@@ -13,12 +13,12 @@ using Controllers;
 
 namespace GSMForms
 {
-    public partial class frmCustomersList : DevExpress.XtraEditors.XtraForm
+    public partial class frmVehiclesList : DevExpress.XtraEditors.XtraForm
     {
         public bool SelectMode { get; set; }
-        public vmCustomer SelectedRecord { get; set; }
+        public vmVehicle SelectedRecord { get; set; }
 
-        public frmCustomersList()
+        public frmVehiclesList()
         {
             InitializeComponent();
         }
@@ -30,8 +30,11 @@ namespace GSMForms
             InitValues();
 
             // Fill Lookups with Data
-            var ProffesionList = new ProffesionControllers();
-            bsProffesion.DataSource = ProffesionList.GetProffesionsList();
+            var VehicleTypeList = new VehicleControllers();
+            bsVehicleType.DataSource = VehicleTypeList.GetVehiclesList();
+
+            var ColorList = new ColorControllers();
+            bsColor.DataSource = ColorList.GetColorsList();
 
         }
 
@@ -42,7 +45,7 @@ namespace GSMForms
             if (colSelected.Visible) colSelected.Visible = !SelectMode;
             gridMain.ForceInitialize();
             gridMain.EndInit();
-        }  
+        }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
@@ -51,7 +54,7 @@ namespace GSMForms
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            using (frmCustomerDetails frm = new frmCustomerDetails { RecMode = RecordMode.Added })
+            using (frmVehicleDetails frm = new frmVehicleDetails { RecMode = RecordMode.Added })
                 if (frm.ShowDialog() == DialogResult.Cancel)
                     return;
                 else
@@ -76,9 +79,9 @@ namespace GSMForms
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (gridVwMain.GetFocusedRow() == null) return;
-            vmCustomer vm = gridVwMain.GetFocusedRow() as vmCustomer;
+            vmVehicle vm = gridVwMain.GetFocusedRow() as vmVehicle;
 
-            using (frmCustomerDetails frm = new frmCustomerDetails { RecMain = new vmCustomer { CustomerID = vm.CustomerID }, RecMode = RecordMode.Modified })
+            using (frmVehicleDetails frm = new frmVehicleDetails { RecMain = new vmVehicle { VehicleID = vm.VehicleID }, RecMode = RecordMode.Modified })
                 if (frm.ShowDialog() == DialogResult.Cancel)
                     return;
                 else
@@ -88,26 +91,26 @@ namespace GSMForms
                         bsMain.Remove(vm);
                         bsMain.Add(frm.RecMain);
                         bsMain.ResetBindings(false);
-                        gridVwMain.FocusedRowHandle = gridVwMain.LocateByValue("CustomerID", frm.RecMain.CustomerID);
+                        gridVwMain.FocusedRowHandle = gridVwMain.LocateByValue("VehicleID", frm.RecMain.VehicleID);
                         LoadData();
                     }
                     catch (Exception)
                     {
 
                         bsMain.ResetBindings(false);
-                        gridVwMain.FocusedRowHandle = gridVwMain.LocateByValue("CustomerID", frm.RecMain.CustomerID);
+                        gridVwMain.FocusedRowHandle = gridVwMain.LocateByValue("VehicleID", frm.RecMain.VehicleID);
                         LoadData();
                     }
-                }    
+                }
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (gridVwMain.GetFocusedRow() == null) return;
-            vmCustomer vm = gridVwMain.GetFocusedRow() as vmCustomer;
+            vmVehicle vm = gridVwMain.GetFocusedRow() as vmVehicle;
 
-            using (frmCustomerDetails frm = new frmCustomerDetails { RecMain = new vmCustomer { CustomerID = vm.CustomerID }, RecMode = RecordMode.Deleted })
+            using (frmVehicleDetails frm = new frmVehicleDetails { RecMain = new vmVehicle { VehicleID = vm.VehicleID }, RecMode = RecordMode.Deleted })
                 if (frm.ShowDialog() == DialogResult.Cancel) return;
 
             try
@@ -128,8 +131,8 @@ namespace GSMForms
         private void LoadData()
         {
             gridMain.BeginInit();
-            var ans = new CustomerControllers();
-            bsMain.DataSource = ans.GetCustomersList();
+            var ans = new VehicleControllers();
+            bsMain.DataSource = ans.GetVehiclesList();
             bsMain.ResetBindings(false);
             gridMain.EndInit();
         }

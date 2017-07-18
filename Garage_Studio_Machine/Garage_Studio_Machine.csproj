@@ -81,6 +81,7 @@
     <Compile Include="Controllers\ProffesionControllers.cs" />
     <Compile Include="Controllers\UnitControllers.cs" />
     <Compile Include="Controllers\VatControllers.cs" />
+    <Compile Include="Controllers\VehicleControllers.cs" />
     <Compile Include="Controllers\VehicleTypeControllers.cs" />
     <Compile Include="Forms\frmColorDetails.cs">
       <SubType>Form</SubType>
@@ -147,6 +148,18 @@
     </Compile>
     <Compile Include="Forms\frmVatsList.Designer.cs">
       <DependentUpon>frmVatsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVehicleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVehicleDetails.Designer.cs">
+      <DependentUpon>frmVehicleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVehiclesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVehiclesList.Designer.cs">
+      <DependentUpon>frmVehiclesList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmVehicleTypeDetails.cs">
       <SubType>Form</SubType>
@@ -223,6 +236,14 @@
     <Compile Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.Designer.cs">
       <DependentUpon>201706250700132_Garage_Studio_Machine_CF1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707181724535_Garage_Studio_Machine_CF2.cs" />
+    <Compile Include="Migrations\201707181724535_Garage_Studio_Machine_CF2.Designer.cs">
+      <DependentUpon>201707181724535_Garage_Studio_Machine_CF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707181725500_Garage_Studio_Machine_CF3.cs" />
+    <Compile Include="Migrations\201707181725500_Garage_Studio_Machine_CF3.Designer.cs">
+      <DependentUpon>201707181725500_Garage_Studio_Machine_CF3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Color.cs" />
@@ -279,6 +300,12 @@
     <EmbeddedResource Include="Forms\frmVatsList.resx">
       <DependentUpon>frmVatsList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVehicleDetails.resx">
+      <DependentUpon>frmVehicleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVehiclesList.resx">
+      <DependentUpon>frmVehiclesList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmVehicleTypeDetails.resx">
       <DependentUpon>frmVehicleTypeDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +357,12 @@
     <EmbeddedResource Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.resx">
       <DependentUpon>201706250700132_Garage_Studio_Machine_CF1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707181724535_Garage_Studio_Machine_CF2.resx">
+      <DependentUpon>201707181724535_Garage_Studio_Machine_CF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707181725500_Garage_Studio_Machine_CF3.resx">
+      <DependentUpon>201707181725500_Garage_Studio_Machine_CF3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -350,6 +383,7 @@
     <None Include="Properties\DataSources\ViewModels.vmUnit.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmVat.datasource" />
     <None Include="Properties\DataSources\vmColor.datasource" />
+    <None Include="Properties\DataSources\vmVehicle.datasource" />
     <None Include="Properties\DataSources\vmVehicleType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

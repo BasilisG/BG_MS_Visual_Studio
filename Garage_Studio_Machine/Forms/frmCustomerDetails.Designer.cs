@@ -285,9 +285,9 @@
             this.panelControl1.Controls.Add(this.btnCancel);
             this.panelControl1.Controls.Add(this.btnSave);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 575);
+            this.panelControl1.Location = new System.Drawing.Point(0, 571);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(541, 40);
+            this.panelControl1.Size = new System.Drawing.Size(544, 40);
             this.panelControl1.TabIndex = 37;
             // 
             // btnCancel
@@ -295,7 +295,7 @@
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(293, 2);
+            this.btnCancel.Location = new System.Drawing.Point(296, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(117, 36);
             this.btnCancel.TabIndex = 4;
@@ -307,7 +307,7 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(410, 2);
+            this.btnSave.Location = new System.Drawing.Point(413, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(129, 36);
             this.btnSave.TabIndex = 3;
@@ -318,10 +318,10 @@
             // 
             this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl1.Location = new System.Drawing.Point(2, 270);
+            this.xtraTabControl1.Location = new System.Drawing.Point(2, 266);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(539, 311);
+            this.xtraTabControl1.Size = new System.Drawing.Size(542, 311);
             this.xtraTabControl1.TabIndex = 38;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -341,7 +341,7 @@
             this.xtraTabPage1.Controls.Add(this.textEdit6);
             this.xtraTabPage1.Controls.Add(this.labelControl5);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(533, 283);
+            this.xtraTabPage1.Size = new System.Drawing.Size(536, 283);
             this.xtraTabPage1.Text = "Διεύθυνση";
             // 
             // textEdit10
@@ -437,7 +437,7 @@
             this.xtraTabPage2.Controls.Add(this.labelControl13);
             this.xtraTabPage2.Controls.Add(this.textEdit13);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(533, 283);
+            this.xtraTabPage2.Size = new System.Drawing.Size(536, 283);
             this.xtraTabPage2.Text = "Επικοινωνία";
             // 
             // xtraTabPage3
@@ -447,7 +447,7 @@
             this.xtraTabPage3.Controls.Add(this.textEdit17);
             this.xtraTabPage3.Controls.Add(this.textEdit16);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(533, 283);
+            this.xtraTabPage3.Size = new System.Drawing.Size(536, 283);
             this.xtraTabPage3.Text = "Λοιπά";
             // 
             // labelControl16
@@ -502,7 +502,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 615);
+            this.ClientSize = new System.Drawing.Size(544, 611);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.labelControl8);

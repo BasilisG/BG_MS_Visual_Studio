@@ -14,13 +14,13 @@ using Controllers;
 
 namespace GSMForms
 {
-    public partial class frmCustomerDetails : DevExpress.XtraEditors.XtraForm
+    public partial class frmVehicleDetails : DevExpress.XtraEditors.XtraForm
     {
-        public vmCustomer RecMain { get; set; }
+        public vmVehicle RecMain { get; set; }
         public RecordMode RecMode { get; set; }
         public CancellationTokenSource cts = new CancellationTokenSource();
 
-        public frmCustomerDetails()
+        public frmVehicleDetails()
         {
             InitializeComponent();
         }
@@ -32,9 +32,12 @@ namespace GSMForms
             InitValues();
             InitDataSources();
 
-            var ProffesionList = new ProffesionControllers();
-            bsProffesion.DataSource = ProffesionList.GetProffesionsList();
-            
+            var VehicleTypeList = new VehicleControllers();
+            bsVehicleType.DataSource = VehicleTypeList.GetVehiclesList();
+
+            var ColorList = new ColorControllers();
+            bsColor.DataSource = ColorList.GetColorsList();
+
         }
 
         //________________________________________________________________________________________
@@ -45,17 +48,17 @@ namespace GSMForms
             switch (RecMode)
             {
                 case RecordMode.Added:
-                    this.Text = "Καταχώρη Πελάτη";
-                    RecMain = new vmCustomer { CustomerID = Guid.NewGuid() };
+                    this.Text = "Καταχώρη Οχήματος";
+                    RecMain = new vmVehicle { VehicleID = Guid.NewGuid() };
                     //tabMain.Enabled = false;
                     break;
                 case RecordMode.Modified:
-                    this.Text = "Μεταβολή Πελάτη";
+                    this.Text = "Μεταβολή Οχήματος";
                     break;
                 case RecordMode.Deleted:
 
                     btnSave.Text = "Διαγραφή";
-                    this.Text = "Διαγραφή Πελάτη";
+                    this.Text = "Διαγραφή Οχήματος";
                     break;
 
                 case RecordMode.ViewOnly:
@@ -78,15 +81,15 @@ namespace GSMForms
         {
             int x = 1;
             //TODO  1111
-            var ans = new CustomerControllers();
+            var ans = new VehicleControllers();
 
             if (ans == null) return false;
-            
-            RecMain = ans.GetCustomerDetails(RecMain.CustomerID.ToString());
+
+            RecMain = ans.GetVehicleDetails(RecMain.VehicleID.ToString());
             return true;
         }
 
-        private void frmCustomerDetails_Load(object sender, EventArgs e)
+        private void frmVehicleDetails_Load(object sender, EventArgs e)
         {
 
         }
@@ -105,8 +108,8 @@ namespace GSMForms
         private bool SaveChanges()
         {
             RecMain.RowStatus = RecMode;
-            var ans = new CustomerControllers();
-            return ans.UpdateCustomer(RecMain);
+            var ans = new VehicleControllers();
+            return ans.UpdateVehicle(RecMain);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -114,7 +117,6 @@ namespace GSMForms
             bsMain.CancelEdit();
             DialogResult = DialogResult.Cancel;
         }
-
 
     }
 }

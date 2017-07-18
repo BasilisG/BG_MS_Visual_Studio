@@ -39,9 +39,9 @@
             this.μονάδεςΜέτρησηςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.κατηγορίεςΦΠΑToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.επαγγέλματαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.τύποιΟχημάτωνToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.εξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.τύποιΟχημάτωνToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,20 +80,21 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(123, 22);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 22);
             this.toolStripSeparator1.Text = "Είδη";
             this.toolStripSeparator1.Click += new System.EventHandler(this.toolStripSeparator1_Click);
             // 
             // οχήματαToolStripMenuItem
             // 
             this.οχήματαToolStripMenuItem.Name = "οχήματαToolStripMenuItem";
-            this.οχήματαToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.οχήματαToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.οχήματαToolStripMenuItem.Text = "Οχήματα";
+            this.οχήματαToolStripMenuItem.Click += new System.EventHandler(this.οχήματαToolStripMenuItem_Click);
             // 
             // πελάτεςToolStripMenuItem
             // 
             this.πελάτεςToolStripMenuItem.Name = "πελάτεςToolStripMenuItem";
-            this.πελάτεςToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.πελάτεςToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.πελάτεςToolStripMenuItem.Text = "Πελάτες";
             this.πελάτεςToolStripMenuItem.Click += new System.EventHandler(this.πελάτεςToolStripMenuItem_Click);
             // 
@@ -135,6 +136,13 @@
             this.επαγγέλματαToolStripMenuItem.Text = "Επαγγέλματα";
             this.επαγγέλματαToolStripMenuItem.Click += new System.EventHandler(this.επαγγέλματαToolStripMenuItem_Click);
             // 
+            // τύποιΟχημάτωνToolStripMenuItem
+            // 
+            this.τύποιΟχημάτωνToolStripMenuItem.Name = "τύποιΟχημάτωνToolStripMenuItem";
+            this.τύποιΟχημάτωνToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.τύποιΟχημάτωνToolStripMenuItem.Text = "Τύποι Οχημάτων";
+            this.τύποιΟχημάτωνToolStripMenuItem.Click += new System.EventHandler(this.τύποιΟχημάτωνToolStripMenuItem_Click);
+            // 
             // εξοδοςToolStripMenuItem
             // 
             this.εξοδοςToolStripMenuItem.Name = "εξοδοςToolStripMenuItem";
@@ -154,13 +162,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // τύποιΟχημάτωνToolStripMenuItem
-            // 
-            this.τύποιΟχημάτωνToolStripMenuItem.Name = "τύποιΟχημάτωνToolStripMenuItem";
-            this.τύποιΟχημάτωνToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.τύποιΟχημάτωνToolStripMenuItem.Text = "Τύποι Οχημάτων";
-            this.τύποιΟχημάτωνToolStripMenuItem.Click += new System.EventHandler(this.τύποιΟχημάτωνToolStripMenuItem_Click);
             // 
             // MainForm
             // 
