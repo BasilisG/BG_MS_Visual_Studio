@@ -59,6 +59,12 @@ namespace ViewModels
             customerList_frm.ShowDialog();
         }
 
+        private void τύποιΟχημάτωνToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVehicleTypesList vehicleTypeList_frm = new frmVehicleTypesList();
+            vehicleTypeList_frm.ShowDialog();
+        }
+
         private void εξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Exit Application Code
@@ -73,6 +79,8 @@ namespace ViewModels
                 System.Environment.Exit(1);
             }
         }
+
+
 
 
 

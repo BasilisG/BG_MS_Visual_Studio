@@ -1,6 +1,6 @@
 ﻿namespace GSMForms
 {
-    partial class frmVatsList
+    partial class frmVehicleTypesList
     {
         /// <summary>
         /// Required designer variable.
@@ -29,44 +29,44 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bsMain = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
+            this.bsMain = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridMain = new DevExpress.XtraGrid.GridControl();
             this.gridVwMain = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colVehicleTypeID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDeleted = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colErrorMessage = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRowStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelected = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVatRate_1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colVatRate_2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
+            this.colTag = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVwMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // bsMain
-            // 
-            this.bsMain.DataSource = typeof(ViewModels.vmVat);
-            // 
             // panelControl1
             // 
+            this.panelControl1.AutoSize = true;
             this.panelControl1.Controls.Add(this.btnDelete);
             this.panelControl1.Controls.Add(this.btnUpdate);
             this.panelControl1.Controls.Add(this.btnInsert);
             this.panelControl1.Controls.Add(this.btnLoad);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Location = new System.Drawing.Point(2, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(143, 461);
-            this.panelControl1.TabIndex = 2;
+            this.panelControl1.Size = new System.Drawing.Size(140, 457);
+            this.panelControl1.TabIndex = 4;
             // 
             // btnDelete
             // 
@@ -104,25 +104,31 @@
             this.btnLoad.Text = "Φόρτωση";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // bsMain
+            // 
+            this.bsMain.DataSource = typeof(ViewModels.vmVehicleType);
+            // 
             // panelControl2
             // 
-            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl2.AutoSize = true;
+            this.panelControl2.Controls.Add(this.panelControl1);
             this.panelControl2.Controls.Add(this.gridMain);
-            this.panelControl2.Location = new System.Drawing.Point(152, 4);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(705, 453);
-            this.panelControl2.TabIndex = 3;
+            this.panelControl2.Size = new System.Drawing.Size(684, 461);
+            this.panelControl2.TabIndex = 5;
             // 
             // gridMain
             // 
+            this.gridMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridMain.DataSource = this.bsMain;
-            this.gridMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridMain.Location = new System.Drawing.Point(2, 2);
+            this.gridMain.Location = new System.Drawing.Point(148, 5);
             this.gridMain.MainView = this.gridVwMain;
             this.gridMain.Name = "gridMain";
-            this.gridMain.Size = new System.Drawing.Size(701, 449);
+            this.gridMain.Size = new System.Drawing.Size(535, 454);
             this.gridMain.TabIndex = 0;
             this.gridMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridVwMain});
@@ -130,15 +136,23 @@
             // gridVwMain
             // 
             this.gridVwMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colVehicleTypeID,
             this.colCode,
             this.colDescription,
+            this.colDeleted,
+            this.colErrorMessage,
+            this.colRowStatus,
             this.colSelected,
-            this.colVatRate_1,
-            this.colVatRate_2});
+            this.colTag});
             this.gridVwMain.GridControl = this.gridMain;
             this.gridVwMain.Name = "gridVwMain";
             this.gridVwMain.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridVwMain.OptionsBehavior.Editable = false;
+            // 
+            // colVehicleTypeID
+            // 
+            this.colVehicleTypeID.FieldName = "VehicleTypeID";
+            this.colVehicleTypeID.Name = "colVehicleTypeID";
             // 
             // colCode
             // 
@@ -147,7 +161,7 @@
             this.colCode.Name = "colCode";
             this.colCode.Visible = true;
             this.colCode.VisibleIndex = 0;
-            this.colCode.Width = 87;
+            this.colCode.Width = 123;
             // 
             // colDescription
             // 
@@ -156,71 +170,73 @@
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
             this.colDescription.VisibleIndex = 1;
-            this.colDescription.Width = 255;
+            this.colDescription.Width = 259;
+            // 
+            // colDeleted
+            // 
+            this.colDeleted.FieldName = "Deleted";
+            this.colDeleted.Name = "colDeleted";
+            // 
+            // colErrorMessage
+            // 
+            this.colErrorMessage.FieldName = "ErrorMessage";
+            this.colErrorMessage.Name = "colErrorMessage";
+            // 
+            // colRowStatus
+            // 
+            this.colRowStatus.FieldName = "RowStatus";
+            this.colRowStatus.Name = "colRowStatus";
             // 
             // colSelected
             // 
             this.colSelected.FieldName = "Selected";
             this.colSelected.Name = "colSelected";
-            this.colSelected.OptionsColumn.AllowEdit = false;
-            this.colSelected.OptionsColumn.AllowFocus = false;
-            this.colSelected.OptionsColumn.ReadOnly = true;
-            this.colSelected.OptionsColumn.ShowInCustomizationForm = false;
             // 
-            // colVatRate_1
+            // colTag
             // 
-            this.colVatRate_1.Caption = "Κανονικό ΦΠΑ";
-            this.colVatRate_1.FieldName = "VatRate_1";
-            this.colVatRate_1.Name = "colVatRate_1";
-            this.colVatRate_1.Visible = true;
-            this.colVatRate_1.VisibleIndex = 2;
-            this.colVatRate_1.Width = 123;
+            this.colTag.FieldName = "Tag";
+            this.colTag.Name = "colTag";
             // 
-            // colVatRate_2
-            // 
-            this.colVatRate_2.Caption = "Μειωμένο ΦΠΑ";
-            this.colVatRate_2.FieldName = "VatRate_2";
-            this.colVatRate_2.Name = "colVatRate_2";
-            this.colVatRate_2.Visible = true;
-            this.colVatRate_2.VisibleIndex = 3;
-            this.colVatRate_2.Width = 213;
-            // 
-            // frmVatsList
+            // frmVehicleTypeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.panelControl2);
-            this.Controls.Add(this.panelControl1);
-            this.Name = "frmVatsList";
+            this.Name = "frmVehicleTypeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Κατηγορίες ΦΠΑ (Λίστα)";
-            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
+            this.Text = "Τύπος Οχήματος (Λίστα)";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVwMain)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.BindingSource bsMain;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnUpdate;
         private DevExpress.XtraEditors.SimpleButton btnInsert;
         private DevExpress.XtraEditors.SimpleButton btnLoad;
+        private System.Windows.Forms.BindingSource bsMain;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraGrid.GridControl gridMain;
         private DevExpress.XtraGrid.Views.Grid.GridView gridVwMain;
+        private DevExpress.XtraGrid.Columns.GridColumn colVehicleTypeID;
         private DevExpress.XtraGrid.Columns.GridColumn colCode;
         private DevExpress.XtraGrid.Columns.GridColumn colDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn colDeleted;
+        private DevExpress.XtraGrid.Columns.GridColumn colErrorMessage;
+        private DevExpress.XtraGrid.Columns.GridColumn colRowStatus;
         private DevExpress.XtraGrid.Columns.GridColumn colSelected;
-        private DevExpress.XtraGrid.Columns.GridColumn colVatRate_1;
-        private DevExpress.XtraGrid.Columns.GridColumn colVatRate_2;
+        private DevExpress.XtraGrid.Columns.GridColumn colTag;
     }
 }

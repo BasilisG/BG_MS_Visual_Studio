@@ -82,6 +82,12 @@
     <Compile Include="Controllers\UnitControllers.cs" />
     <Compile Include="Controllers\VatControllers.cs" />
     <Compile Include="Controllers\VehicleTypeControllers.cs" />
+    <Compile Include="Forms\frmColorDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmColorDetails.Designer.cs">
+      <DependentUpon>frmColorDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,11 +148,23 @@
     <Compile Include="Forms\frmVatsList.Designer.cs">
       <DependentUpon>frmVatsList.cs</DependentUpon>
     </Compile>
-    <Compile Include="GarageContext.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\frmVehicleTypeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\frmVehicleTypeDetails.Designer.cs">
+      <DependentUpon>frmVehicleTypeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVehicleTypesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVehicleTypesList.Designer.cs">
+      <DependentUpon>frmVehicleTypesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GarageContext.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201705270603500_Initial.cs" />
@@ -214,6 +232,7 @@
     <Compile Include="Models\Proffesion.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\Vat.cs" />
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Models\VehicleType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -225,7 +244,11 @@
     <Compile Include="ViewModels\vmProffesion.cs" />
     <Compile Include="ViewModels\vmUnit.cs" />
     <Compile Include="ViewModels\vmVat.cs" />
+    <Compile Include="ViewModels\vmVehicle.cs" />
     <Compile Include="ViewModels\vmVehicleType.cs" />
+    <EmbeddedResource Include="Forms\frmColorDetails.resx">
+      <DependentUpon>frmColorDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCustomerDetails.resx">
       <DependentUpon>frmCustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,7 +279,13 @@
     <EmbeddedResource Include="Forms\frmVatsList.resx">
       <DependentUpon>frmVatsList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\frmVehicleTypeDetails.resx">
+      <DependentUpon>frmVehicleTypeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVehicleTypesList.resx">
+      <DependentUpon>frmVehicleTypesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705270603500_Initial.resx">
@@ -320,6 +349,8 @@
     <None Include="Properties\DataSources\ViewModels.vmProffesion.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmUnit.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmVat.datasource" />
+    <None Include="Properties\DataSources\vmColor.datasource" />
+    <None Include="Properties\DataSources\vmVehicleType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

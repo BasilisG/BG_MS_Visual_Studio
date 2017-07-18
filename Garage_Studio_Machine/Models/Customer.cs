@@ -12,7 +12,6 @@ namespace Models
 {
     public class Customer : BaseEntity
     {
-
         public Customer()
         { }
 
