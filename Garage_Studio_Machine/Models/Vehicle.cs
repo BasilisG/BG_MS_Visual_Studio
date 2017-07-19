@@ -70,7 +70,7 @@ namespace Models
         public static Vehicle FromViewModel(this Vehicle rec, vmVehicle vm)
         {
             rec.VehicleID = vm.VehicleID;
-            rec.NumberPlate = vm.NumberPlate;
+            rec.NumberPlate = vm.NumberPlate.ToUpper();
             rec.Description = vm.Description;
             rec.VehicleTypeID = vm.VehicleTypeID;
             rec.ColorID = vm.ColorID;

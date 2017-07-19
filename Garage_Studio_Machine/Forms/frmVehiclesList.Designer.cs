@@ -35,13 +35,17 @@
             this.btnInsert = new DevExpress.XtraEditors.SimpleButton();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.gridMain = new DevExpress.XtraGrid.GridControl();
-            this.gridVwMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bsMain = new System.Windows.Forms.BindingSource(this.components);
+            this.gridVwMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colVehicleID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumberPlate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVehicleTypeID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpVEHICLETYPE = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.bsVehicleType = new System.Windows.Forms.BindingSource(this.components);
             this.colColorID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpCOLOR = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.bsColor = new System.Windows.Forms.BindingSource(this.components);
             this.colModelID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEngineCubic = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFirstDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,19 +59,15 @@
             this.colRowStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSelected = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTag = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpCOLOR = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.bsColor = new System.Windows.Forms.BindingSource(this.components);
-            this.bsVehicleType = new System.Windows.Forms.BindingSource(this.components);
-            this.repositoryItemLookUpVEHICLETYPE = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridVwMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridVwMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpVEHICLETYPE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVehicleType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpCOLOR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsColor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsVehicleType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpVEHICLETYPE)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -133,6 +133,10 @@
             this.gridMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridVwMain});
             // 
+            // bsMain
+            // 
+            this.bsMain.DataSource = typeof(ViewModels.vmVehicle);
+            // 
             // gridVwMain
             // 
             this.gridVwMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -156,10 +160,8 @@
             this.colTag});
             this.gridVwMain.GridControl = this.gridMain;
             this.gridVwMain.Name = "gridVwMain";
-            // 
-            // bsMain
-            // 
-            this.bsMain.DataSource = typeof(ViewModels.vmVehicle);
+            this.gridVwMain.OptionsBehavior.Editable = false;
+            this.gridVwMain.OptionsBehavior.ReadOnly = true;
             // 
             // colVehicleID
             // 
@@ -168,6 +170,7 @@
             // 
             // colNumberPlate
             // 
+            this.colNumberPlate.Caption = "Αριθμός Πινακίδας";
             this.colNumberPlate.FieldName = "NumberPlate";
             this.colNumberPlate.Name = "colNumberPlate";
             this.colNumberPlate.Visible = true;
@@ -175,6 +178,7 @@
             // 
             // colDescription
             // 
+            this.colDescription.Caption = "Περιγραφή";
             this.colDescription.FieldName = "Description";
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
@@ -182,110 +186,35 @@
             // 
             // colVehicleTypeID
             // 
+            this.colVehicleTypeID.Caption = "Τύπος";
             this.colVehicleTypeID.ColumnEdit = this.repositoryItemLookUpVEHICLETYPE;
             this.colVehicleTypeID.FieldName = "VehicleTypeID";
             this.colVehicleTypeID.Name = "colVehicleTypeID";
             this.colVehicleTypeID.Visible = true;
             this.colVehicleTypeID.VisibleIndex = 2;
             // 
+            // repositoryItemLookUpVEHICLETYPE
+            // 
+            this.repositoryItemLookUpVEHICLETYPE.AutoHeight = false;
+            this.repositoryItemLookUpVEHICLETYPE.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpVEHICLETYPE.DataSource = this.bsVehicleType;
+            this.repositoryItemLookUpVEHICLETYPE.DisplayMember = "Description";
+            this.repositoryItemLookUpVEHICLETYPE.Name = "repositoryItemLookUpVEHICLETYPE";
+            this.repositoryItemLookUpVEHICLETYPE.ValueMember = "VehicleTypeID";
+            // 
+            // bsVehicleType
+            // 
+            this.bsVehicleType.DataSource = typeof(ViewModels.vmVehicleType);
+            // 
             // colColorID
             // 
+            this.colColorID.Caption = "Χρώμα";
             this.colColorID.ColumnEdit = this.repositoryItemLookUpCOLOR;
             this.colColorID.FieldName = "ColorID";
             this.colColorID.Name = "colColorID";
             this.colColorID.Visible = true;
             this.colColorID.VisibleIndex = 3;
-            // 
-            // colModelID
-            // 
-            this.colModelID.FieldName = "ModelID";
-            this.colModelID.Name = "colModelID";
-            this.colModelID.Visible = true;
-            this.colModelID.VisibleIndex = 4;
-            // 
-            // colEngineCubic
-            // 
-            this.colEngineCubic.FieldName = "EngineCubic";
-            this.colEngineCubic.Name = "colEngineCubic";
-            this.colEngineCubic.Visible = true;
-            this.colEngineCubic.VisibleIndex = 5;
-            // 
-            // colFirstDate
-            // 
-            this.colFirstDate.FieldName = "FirstDate";
-            this.colFirstDate.Name = "colFirstDate";
-            this.colFirstDate.Visible = true;
-            this.colFirstDate.VisibleIndex = 6;
-            // 
-            // colNumberDoors
-            // 
-            this.colNumberDoors.FieldName = "NumberDoors";
-            this.colNumberDoors.Name = "colNumberDoors";
-            this.colNumberDoors.Visible = true;
-            this.colNumberDoors.VisibleIndex = 7;
-            // 
-            // colNumberChassis
-            // 
-            this.colNumberChassis.FieldName = "NumberChassis";
-            this.colNumberChassis.Name = "colNumberChassis";
-            this.colNumberChassis.Visible = true;
-            this.colNumberChassis.VisibleIndex = 8;
-            // 
-            // colNumberEngine
-            // 
-            this.colNumberEngine.FieldName = "NumberEngine";
-            this.colNumberEngine.Name = "colNumberEngine";
-            this.colNumberEngine.Visible = true;
-            this.colNumberEngine.VisibleIndex = 9;
-            // 
-            // colComments
-            // 
-            this.colComments.FieldName = "Comments";
-            this.colComments.Name = "colComments";
-            this.colComments.Visible = true;
-            this.colComments.VisibleIndex = 10;
-            // 
-            // colUserID
-            // 
-            this.colUserID.FieldName = "UserID";
-            this.colUserID.Name = "colUserID";
-            this.colUserID.Visible = true;
-            this.colUserID.VisibleIndex = 11;
-            // 
-            // colDeleted
-            // 
-            this.colDeleted.FieldName = "Deleted";
-            this.colDeleted.Name = "colDeleted";
-            this.colDeleted.Visible = true;
-            this.colDeleted.VisibleIndex = 12;
-            // 
-            // colErrorMessage
-            // 
-            this.colErrorMessage.FieldName = "ErrorMessage";
-            this.colErrorMessage.Name = "colErrorMessage";
-            this.colErrorMessage.Visible = true;
-            this.colErrorMessage.VisibleIndex = 13;
-            // 
-            // colRowStatus
-            // 
-            this.colRowStatus.FieldName = "RowStatus";
-            this.colRowStatus.Name = "colRowStatus";
-            this.colRowStatus.Visible = true;
-            this.colRowStatus.VisibleIndex = 14;
-            // 
-            // colSelected
-            // 
-            this.colSelected.FieldName = "Selected";
-            this.colSelected.Name = "colSelected";
-            this.colSelected.Visible = true;
-            this.colSelected.VisibleIndex = 15;
-            // 
-            // colTag
-            // 
-            this.colTag.FieldName = "Tag";
-            this.colTag.Name = "colTag";
-            this.colTag.Visible = true;
-            this.colTag.VisibleIndex = 16;
             // 
             // repositoryItemLookUpCOLOR
             // 
@@ -301,19 +230,88 @@
             // 
             this.bsColor.DataSource = typeof(ViewModels.vmColor);
             // 
-            // bsVehicleType
+            // colModelID
             // 
-            this.bsVehicleType.DataSource = typeof(ViewModels.vmVehicleType);
+            this.colModelID.Caption = "Μοντέλο";
+            this.colModelID.FieldName = "ModelID";
+            this.colModelID.Name = "colModelID";
+            this.colModelID.Visible = true;
+            this.colModelID.VisibleIndex = 4;
             // 
-            // repositoryItemLookUpVEHICLETYPE
+            // colEngineCubic
             // 
-            this.repositoryItemLookUpVEHICLETYPE.AutoHeight = false;
-            this.repositoryItemLookUpVEHICLETYPE.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpVEHICLETYPE.DataSource = this.bsVehicleType;
-            this.repositoryItemLookUpVEHICLETYPE.DisplayMember = "Description";
-            this.repositoryItemLookUpVEHICLETYPE.Name = "repositoryItemLookUpVEHICLETYPE";
-            this.repositoryItemLookUpVEHICLETYPE.ValueMember = "VehicleTypeID";
+            this.colEngineCubic.Caption = "Κυβισμός  Μηχανής";
+            this.colEngineCubic.FieldName = "EngineCubic";
+            this.colEngineCubic.Name = "colEngineCubic";
+            this.colEngineCubic.Visible = true;
+            this.colEngineCubic.VisibleIndex = 5;
+            // 
+            // colFirstDate
+            // 
+            this.colFirstDate.Caption = "Πρώτη Ημερομηνία Κυκλοφορίας";
+            this.colFirstDate.FieldName = "FirstDate";
+            this.colFirstDate.Name = "colFirstDate";
+            this.colFirstDate.Visible = true;
+            this.colFirstDate.VisibleIndex = 6;
+            // 
+            // colNumberDoors
+            // 
+            this.colNumberDoors.Caption = "Αριθμός Θηρών";
+            this.colNumberDoors.FieldName = "NumberDoors";
+            this.colNumberDoors.Name = "colNumberDoors";
+            this.colNumberDoors.Visible = true;
+            this.colNumberDoors.VisibleIndex = 7;
+            // 
+            // colNumberChassis
+            // 
+            this.colNumberChassis.Caption = "Αριθμός Πλαισίου";
+            this.colNumberChassis.FieldName = "NumberChassis";
+            this.colNumberChassis.Name = "colNumberChassis";
+            this.colNumberChassis.Visible = true;
+            this.colNumberChassis.VisibleIndex = 8;
+            // 
+            // colNumberEngine
+            // 
+            this.colNumberEngine.Caption = "Αριθμός Μηχανής";
+            this.colNumberEngine.FieldName = "NumberEngine";
+            this.colNumberEngine.Name = "colNumberEngine";
+            this.colNumberEngine.Visible = true;
+            this.colNumberEngine.VisibleIndex = 9;
+            // 
+            // colComments
+            // 
+            this.colComments.FieldName = "Comments";
+            this.colComments.Name = "colComments";
+            // 
+            // colUserID
+            // 
+            this.colUserID.FieldName = "UserID";
+            this.colUserID.Name = "colUserID";
+            // 
+            // colDeleted
+            // 
+            this.colDeleted.FieldName = "Deleted";
+            this.colDeleted.Name = "colDeleted";
+            // 
+            // colErrorMessage
+            // 
+            this.colErrorMessage.FieldName = "ErrorMessage";
+            this.colErrorMessage.Name = "colErrorMessage";
+            // 
+            // colRowStatus
+            // 
+            this.colRowStatus.FieldName = "RowStatus";
+            this.colRowStatus.Name = "colRowStatus";
+            // 
+            // colSelected
+            // 
+            this.colSelected.FieldName = "Selected";
+            this.colSelected.Name = "colSelected";
+            // 
+            // colTag
+            // 
+            this.colTag.FieldName = "Tag";
+            this.colTag.Name = "colTag";
             // 
             // frmVehiclesList
             // 
@@ -328,12 +326,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridVwMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridVwMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpVEHICLETYPE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsVehicleType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpCOLOR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsColor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsVehicleType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpVEHICLETYPE)).EndInit();
             this.ResumeLayout(false);
 
         }

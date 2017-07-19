@@ -42,6 +42,7 @@
             this.τύποιΟχημάτωνToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.εξοδοςToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.χρώματαToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,21 +81,21 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(123, 22);
             this.toolStripSeparator1.Text = "Είδη";
             this.toolStripSeparator1.Click += new System.EventHandler(this.toolStripSeparator1_Click);
             // 
             // οχήματαToolStripMenuItem
             // 
             this.οχήματαToolStripMenuItem.Name = "οχήματαToolStripMenuItem";
-            this.οχήματαToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.οχήματαToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.οχήματαToolStripMenuItem.Text = "Οχήματα";
             this.οχήματαToolStripMenuItem.Click += new System.EventHandler(this.οχήματαToolStripMenuItem_Click);
             // 
             // πελάτεςToolStripMenuItem
             // 
             this.πελάτεςToolStripMenuItem.Name = "πελάτεςToolStripMenuItem";
-            this.πελάτεςToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.πελάτεςToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.πελάτεςToolStripMenuItem.Text = "Πελάτες";
             this.πελάτεςToolStripMenuItem.Click += new System.EventHandler(this.πελάτεςToolStripMenuItem_Click);
             // 
@@ -110,7 +111,8 @@
             this.μονάδεςΜέτρησηςToolStripMenuItem,
             this.κατηγορίεςΦΠΑToolStripMenuItem,
             this.επαγγέλματαToolStripMenuItem,
-            this.τύποιΟχημάτωνToolStripMenuItem});
+            this.τύποιΟχημάτωνToolStripMenuItem,
+            this.χρώματαToolStripMenuItem});
             this.παράμετροιToolStripMenuItem.Name = "παράμετροιToolStripMenuItem";
             this.παράμετροιToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.παράμετροιToolStripMenuItem.Text = "Παράμετροι";
@@ -163,6 +165,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // χρώματαToolStripMenuItem
+            // 
+            this.χρώματαToolStripMenuItem.Name = "χρώματαToolStripMenuItem";
+            this.χρώματαToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.χρώματαToolStripMenuItem.Text = "Χρώματα";
+            this.χρώματαToolStripMenuItem.Click += new System.EventHandler(this.χρώματαToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +209,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem επαγγέλματαToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem τύποιΟχημάτωνToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem χρώματαToolStripMenuItem;
     }
 }
 

@@ -34,7 +34,6 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
-            this.bsMain = new System.Windows.Forms.BindingSource(this.components);
             this.lblCode = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -56,12 +55,12 @@
             this.textEdit2 = new DevExpress.XtraEditors.LookUpEdit();
             this.textEdit3 = new DevExpress.XtraEditors.LookUpEdit();
             this.textEdit4 = new DevExpress.XtraEditors.LookUpEdit();
+            this.bsMain = new System.Windows.Forms.BindingSource(this.components);
             this.bsColor = new System.Windows.Forms.BindingSource(this.components);
             this.bsVehicleType = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
@@ -73,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVehicleType)).BeginInit();
             this.SuspendLayout();
@@ -119,10 +119,6 @@
             this.txtCode.Size = new System.Drawing.Size(194, 20);
             this.txtCode.TabIndex = 40;
             // 
-            // bsMain
-            // 
-            this.bsMain.DataSource = typeof(ViewModels.vmVehicle);
-            // 
             // lblCode
             // 
             this.lblCode.Location = new System.Drawing.Point(22, 48);
@@ -133,10 +129,12 @@
             // 
             // textEdit1
             // 
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Description", true));
             this.textEdit1.Location = new System.Drawing.Point(105, 82);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(348, 20);
+            this.textEdit1.Size = new System.Drawing.Size(353, 20);
             this.textEdit1.TabIndex = 42;
             // 
             // labelControl1
@@ -173,10 +171,12 @@
             // 
             // textEdit5
             // 
+            this.textEdit5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit5.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "EngineCubic", true));
             this.textEdit5.Location = new System.Drawing.Point(204, 231);
             this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(249, 20);
+            this.textEdit5.Size = new System.Drawing.Size(254, 20);
             this.textEdit5.TabIndex = 50;
             // 
             // labelControl5
@@ -197,10 +197,12 @@
             // 
             // textEdit7
             // 
+            this.textEdit7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit7.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "NumberDoors", true));
             this.textEdit7.Location = new System.Drawing.Point(204, 306);
             this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(249, 20);
+            this.textEdit7.Size = new System.Drawing.Size(254, 20);
             this.textEdit7.TabIndex = 54;
             // 
             // labelControl7
@@ -213,10 +215,12 @@
             // 
             // textEdit8
             // 
+            this.textEdit8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit8.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "NumberChassis", true));
             this.textEdit8.Location = new System.Drawing.Point(115, 343);
             this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(338, 20);
+            this.textEdit8.Size = new System.Drawing.Size(343, 20);
             this.textEdit8.TabIndex = 56;
             // 
             // labelControl8
@@ -229,10 +233,12 @@
             // 
             // textEdit9
             // 
+            this.textEdit9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit9.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "NumberEngine", true));
             this.textEdit9.Location = new System.Drawing.Point(115, 376);
             this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(338, 20);
+            this.textEdit9.Size = new System.Drawing.Size(343, 20);
             this.textEdit9.TabIndex = 58;
             // 
             // labelControl9
@@ -253,6 +259,8 @@
             // 
             // textEdit6
             // 
+            this.textEdit6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit6.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "FirstDate", true));
             this.textEdit6.EditValue = null;
             this.textEdit6.Location = new System.Drawing.Point(204, 268);
@@ -261,62 +269,82 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.textEdit6.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit6.Properties.DisplayFormat.FormatString = "";
-            this.textEdit6.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.textEdit6.Properties.EditFormat.FormatString = "";
-            this.textEdit6.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit6.Properties.Mask.EditMask = "";
-            this.textEdit6.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEdit6.Size = new System.Drawing.Size(249, 20);
+            this.textEdit6.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.textEdit6.Size = new System.Drawing.Size(254, 20);
             this.textEdit6.TabIndex = 52;
             // 
             // textEdit10
             // 
+            this.textEdit10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit10.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Comments", true));
             this.textEdit10.Location = new System.Drawing.Point(86, 409);
             this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(367, 106);
+            this.textEdit10.Size = new System.Drawing.Size(372, 106);
             this.textEdit10.TabIndex = 60;
             // 
             // textEdit2
             // 
+            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "ColorID", true));
             this.textEdit2.Location = new System.Drawing.Point(105, 119);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit2.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 63, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.textEdit2.Properties.DataSource = this.bsColor;
             this.textEdit2.Properties.DisplayMember = "Description";
             this.textEdit2.Properties.NullText = "";
             this.textEdit2.Properties.ValueMember = "ColorID";
-            this.textEdit2.Size = new System.Drawing.Size(348, 20);
+            this.textEdit2.Size = new System.Drawing.Size(353, 20);
             this.textEdit2.TabIndex = 44;
             // 
             // textEdit3
             // 
+            this.textEdit3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "VehicleTypeID", true));
             this.textEdit3.Location = new System.Drawing.Point(105, 156);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit3.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "Code", 35, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 63, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
             this.textEdit3.Properties.DataSource = this.bsVehicleType;
             this.textEdit3.Properties.DisplayMember = "Description";
             this.textEdit3.Properties.NullText = "";
             this.textEdit3.Properties.ValueMember = "VehicleTypeID";
-            this.textEdit3.Size = new System.Drawing.Size(348, 20);
+            this.textEdit3.Size = new System.Drawing.Size(353, 20);
             this.textEdit3.TabIndex = 46;
             // 
             // textEdit4
             // 
+            this.textEdit4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEdit4.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "ModelID", true));
             this.textEdit4.Enabled = false;
             this.textEdit4.Location = new System.Drawing.Point(105, 193);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit4.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Code", "Code", 35, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 63, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.textEdit4.Properties.DataSource = this.bsVehicleType;
+            this.textEdit4.Properties.DisplayMember = "Description";
             this.textEdit4.Properties.NullText = "";
-            this.textEdit4.Size = new System.Drawing.Size(348, 20);
+            this.textEdit4.Properties.ValueMember = "VehicleTypeID";
+            this.textEdit4.Size = new System.Drawing.Size(353, 20);
             this.textEdit4.TabIndex = 48;
+            // 
+            // bsMain
+            // 
+            this.bsMain.DataSource = typeof(ViewModels.vmVehicle);
             // 
             // bsColor
             // 
@@ -355,11 +383,11 @@
             this.Controls.Add(this.textEdit3);
             this.Controls.Add(this.textEdit4);
             this.Name = "frmVehicleDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Όχημα";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
@@ -371,6 +399,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsVehicleType)).EndInit();
             this.ResumeLayout(false);

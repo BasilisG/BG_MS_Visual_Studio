@@ -34,14 +34,11 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
-            this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lblCode = new DevExpress.XtraEditors.LabelControl();
             this.bsMain = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,17 +78,11 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsMain, "Description", true));
             this.txtDescription.Location = new System.Drawing.Point(106, 44);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(251, 20);
             this.txtDescription.TabIndex = 15;
-            // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(106, 15);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(100, 20);
-            this.txtCode.TabIndex = 14;
             // 
             // labelControl1
             // 
@@ -100,14 +91,6 @@
             this.labelControl1.Size = new System.Drawing.Size(52, 13);
             this.labelControl1.TabIndex = 13;
             this.labelControl1.Text = "Περιγραφή";
-            // 
-            // lblCode
-            // 
-            this.lblCode.Location = new System.Drawing.Point(12, 22);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(39, 13);
-            this.lblCode.TabIndex = 12;
-            this.lblCode.Text = "Κωδικός";
             // 
             // bsMain
             // 
@@ -120,9 +103,7 @@
             this.ClientSize = new System.Drawing.Size(384, 211);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.txtDescription);
-            this.Controls.Add(this.txtCode);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.lblCode);
             this.Name = "frmColorDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Χρώμα Οχήματος";
@@ -130,7 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,9 +123,7 @@
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtDescription;
-        private DevExpress.XtraEditors.TextEdit txtCode;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl lblCode;
         private System.Windows.Forms.BindingSource bsMain;
     }
 }

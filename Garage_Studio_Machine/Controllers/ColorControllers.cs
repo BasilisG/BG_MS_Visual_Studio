@@ -35,7 +35,7 @@ namespace Controllers
 
         // Get Colors List
         public vmColor[] GetColorsList()
-        {
+         {
             try
             {
                 using (GarageContext ctx = new GarageContext())

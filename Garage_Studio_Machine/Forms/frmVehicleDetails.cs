@@ -32,8 +32,8 @@ namespace GSMForms
             InitValues();
             InitDataSources();
 
-            var VehicleTypeList = new VehicleControllers();
-            bsVehicleType.DataSource = VehicleTypeList.GetVehiclesList();
+            var VehicleTypeList = new VehicleTypeControllers();
+            bsVehicleType.DataSource = VehicleTypeList.GetVehicleTypesList();
 
             var ColorList = new ColorControllers();
             bsColor.DataSource = ColorList.GetColorsList();
@@ -49,7 +49,7 @@ namespace GSMForms
             {
                 case RecordMode.Added:
                     this.Text = "Καταχώρη Οχήματος";
-                    RecMain = new vmVehicle { VehicleID = Guid.NewGuid() };
+                    RecMain = new vmVehicle { VehicleID = Guid.NewGuid() , FirstDate = DateTime.Today };
                     //tabMain.Enabled = false;
                     break;
                 case RecordMode.Modified:
@@ -96,7 +96,7 @@ namespace GSMForms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (RecMode == RecordMode.Unchanged || RecMode == RecordMode.ViewOnly)
+           if (RecMode == RecordMode.Unchanged || RecMode == RecordMode.ViewOnly)
                 DialogResult = DialogResult.OK;
             bsMain.EndEdit();
             //if (!CheckData()) return;
@@ -107,9 +107,18 @@ namespace GSMForms
         //________________________________________________________________________________________
         private bool SaveChanges()
         {
-            RecMain.RowStatus = RecMode;
-            var ans = new VehicleControllers();
-            return ans.UpdateVehicle(RecMain);
+            try
+            {
+                RecMain.RowStatus = RecMode;
+                var ans = new VehicleControllers();
+                return ans.UpdateVehicle(RecMain);
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

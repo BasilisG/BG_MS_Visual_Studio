@@ -71,6 +71,12 @@ namespace ViewModels
             vehicleList_frm.ShowDialog();
         }
 
+        private void χρώματαToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmColorsList colorList_frm = new frmColorsList();
+            colorList_frm.ShowDialog();
+        }   
+
         private void εξοδοςToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Exit Application Code
@@ -85,6 +91,7 @@ namespace ViewModels
                 System.Environment.Exit(1);
             }
         }
+
 
 
     }
