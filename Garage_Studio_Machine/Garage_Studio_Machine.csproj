@@ -186,69 +186,9 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705270603500_Initial.cs" />
-    <Compile Include="Migrations\201705270603500_Initial.Designer.cs">
-      <DependentUpon>201705270603500_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705270606118_Garage_Studio_Machine_CF.cs" />
-    <Compile Include="Migrations\201705270606118_Garage_Studio_Machine_CF.Designer.cs">
-      <DependentUpon>201705270606118_Garage_Studio_Machine_CF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705271245481_Garage_Studio_Machine_CF1.cs" />
-    <Compile Include="Migrations\201705271245481_Garage_Studio_Machine_CF1.Designer.cs">
-      <DependentUpon>201705271245481_Garage_Studio_Machine_CF1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705271246587_Garage_Studio_Machine_CF2.cs" />
-    <Compile Include="Migrations\201705271246587_Garage_Studio_Machine_CF2.Designer.cs">
-      <DependentUpon>201705271246587_Garage_Studio_Machine_CF2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706021549289_Garage_Studio_Machine_CF3.cs" />
-    <Compile Include="Migrations\201706021549289_Garage_Studio_Machine_CF3.Designer.cs">
-      <DependentUpon>201706021549289_Garage_Studio_Machine_CF3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706021550437_Garage_Studio_Machine_CF4.cs" />
-    <Compile Include="Migrations\201706021550437_Garage_Studio_Machine_CF4.Designer.cs">
-      <DependentUpon>201706021550437_Garage_Studio_Machine_CF4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706021603030_Garage_Studio_Machine_CF5.cs" />
-    <Compile Include="Migrations\201706021603030_Garage_Studio_Machine_CF5.Designer.cs">
-      <DependentUpon>201706021603030_Garage_Studio_Machine_CF5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706021604093_Garage_Studio_Machine_CF6.cs" />
-    <Compile Include="Migrations\201706021604093_Garage_Studio_Machine_CF6.Designer.cs">
-      <DependentUpon>201706021604093_Garage_Studio_Machine_CF6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706021610356_Garage_Studio_Machine_CF7.cs" />
-    <Compile Include="Migrations\201706021610356_Garage_Studio_Machine_CF7.Designer.cs">
-      <DependentUpon>201706021610356_Garage_Studio_Machine_CF7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.cs" />
-    <Compile Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.Designer.cs">
-      <DependentUpon>201706081935365_Garage_Studio_Machine_CF8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.cs" />
-    <Compile Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.Designer.cs">
-      <DependentUpon>201706131541020_Garage_Studio_Machine_CF9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706250631078_Garage_Studio_Machine_CF10.cs" />
-    <Compile Include="Migrations\201706250631078_Garage_Studio_Machine_CF10.Designer.cs">
-      <DependentUpon>201706250631078_Garage_Studio_Machine_CF10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706250651187_Garage_Studio_Machine_CF.cs" />
-    <Compile Include="Migrations\201706250651187_Garage_Studio_Machine_CF.Designer.cs">
-      <DependentUpon>201706250651187_Garage_Studio_Machine_CF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.cs" />
-    <Compile Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.Designer.cs">
-      <DependentUpon>201706250700132_Garage_Studio_Machine_CF1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707181724535_Garage_Studio_Machine_CF2.cs" />
-    <Compile Include="Migrations\201707181724535_Garage_Studio_Machine_CF2.Designer.cs">
-      <DependentUpon>201707181724535_Garage_Studio_Machine_CF2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707181725500_Garage_Studio_Machine_CF3.cs" />
-    <Compile Include="Migrations\201707181725500_Garage_Studio_Machine_CF3.Designer.cs">
-      <DependentUpon>201707181725500_Garage_Studio_Machine_CF3.cs</DependentUpon>
+    <Compile Include="Migrations\201708041629443_Initial.cs" />
+    <Compile Include="Migrations\201708041629443_Initial.Designer.cs">
+      <DependentUpon>201708041629443_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
@@ -324,53 +264,8 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705270603500_Initial.resx">
-      <DependentUpon>201705270603500_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705270606118_Garage_Studio_Machine_CF.resx">
-      <DependentUpon>201705270606118_Garage_Studio_Machine_CF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705271245481_Garage_Studio_Machine_CF1.resx">
-      <DependentUpon>201705271245481_Garage_Studio_Machine_CF1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705271246587_Garage_Studio_Machine_CF2.resx">
-      <DependentUpon>201705271246587_Garage_Studio_Machine_CF2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706021549289_Garage_Studio_Machine_CF3.resx">
-      <DependentUpon>201706021549289_Garage_Studio_Machine_CF3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706021550437_Garage_Studio_Machine_CF4.resx">
-      <DependentUpon>201706021550437_Garage_Studio_Machine_CF4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706021603030_Garage_Studio_Machine_CF5.resx">
-      <DependentUpon>201706021603030_Garage_Studio_Machine_CF5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706021604093_Garage_Studio_Machine_CF6.resx">
-      <DependentUpon>201706021604093_Garage_Studio_Machine_CF6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706021610356_Garage_Studio_Machine_CF7.resx">
-      <DependentUpon>201706021610356_Garage_Studio_Machine_CF7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706081935365_Garage_Studio_Machine_CF8.resx">
-      <DependentUpon>201706081935365_Garage_Studio_Machine_CF8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706131541020_Garage_Studio_Machine_CF9.resx">
-      <DependentUpon>201706131541020_Garage_Studio_Machine_CF9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706250631078_Garage_Studio_Machine_CF10.resx">
-      <DependentUpon>201706250631078_Garage_Studio_Machine_CF10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706250651187_Garage_Studio_Machine_CF.resx">
-      <DependentUpon>201706250651187_Garage_Studio_Machine_CF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706250700132_Garage_Studio_Machine_CF1.resx">
-      <DependentUpon>201706250700132_Garage_Studio_Machine_CF1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707181724535_Garage_Studio_Machine_CF2.resx">
-      <DependentUpon>201707181724535_Garage_Studio_Machine_CF2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707181725500_Garage_Studio_Machine_CF3.resx">
-      <DependentUpon>201707181725500_Garage_Studio_Machine_CF3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201708041629443_Initial.resx">
+      <DependentUpon>201708041629443_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -383,6 +278,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Models\TrnServiceHeader.cs" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Controllers.CustomerControllers.datasource" />
     <None Include="Properties\DataSources\ViewModels.vmCustomer.datasource" />

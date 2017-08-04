@@ -19,6 +19,11 @@ namespace Models
         {
             //Disable initializer
             //Database.SetInitializer<SchoolContext>(null);
+            
+            // Database.SetInitializer(new MigrateDatabaseToLatestVersion<GarageContext, Configuration>());
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Models.GarageContext, Migrations.Configuration>());
+         
         }
 
         public DbSet<Unit> Units { get; set; }
