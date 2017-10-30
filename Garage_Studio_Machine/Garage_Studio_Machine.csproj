@@ -218,6 +218,7 @@
     <Compile Include="ViewModels\vmItem.cs" />
     <Compile Include="ViewModels\vmItemType.cs" />
     <Compile Include="ViewModels\vmProffesion.cs" />
+    <Compile Include="ViewModels\vmTrnServiceHeader.cs" />
     <Compile Include="ViewModels\vmUnit.cs" />
     <Compile Include="ViewModels\vmVat.cs" />
     <Compile Include="ViewModels\vmVehicle.cs" />

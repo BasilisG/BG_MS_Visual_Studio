@@ -43,8 +43,7 @@ namespace Models
         // 1:N Relation [Navigation]
         public virtual ICollection<TrnServiceRow> TrnServiceRows { get; set; }
     }
-    
-    
+        
 	public static class TrnServiceHeaderExtensions
     {
 		public static vmTrnServiceHeader ToViewModel(this TrnServiceHeader rec)
@@ -77,6 +76,8 @@ namespace Models
 			rec.Kilometers = vm.Kilometers;
 			rec.Comments = vm.Comments;
             rec.UserID = vm.UserID;
+            rec.Date_Ins = DateTime.Now;
+            rec.Date_Upd = DateTime.Now;
 
             return rec;
         }

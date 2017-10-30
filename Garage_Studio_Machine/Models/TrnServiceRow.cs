@@ -13,7 +13,7 @@ namespace Models
     public class TrnServiceRow : BaseEntity
     {
         public TrnServiceRow()
-        {}
+        { }
 
         // Entity TrnServiceRow fields
 
@@ -44,7 +44,55 @@ namespace Models
         public virtual TrnServiceHeader TrnServiceHeader { get; set; }
         public virtual Item Item { get; set; }
 
+        public static class TrnServiceRowExtensions
+        {
+            public static vmTrnServiceRow ToViewModel(this TrnServiceRow rec)
+            {
+                return new vmTrnServiceRow
+                {
+                    TrnServiceRowID = rec.TrnServiceRowID,
+                    TrnServiceHeaderID = rec.TrnServiceHeaderID,
+                    LineNumber = rec.LineNumber,
+                    ItemTypeID = rec.ItemTypeID,
+                    ItemID = rec.ItemID,
+                    QtyA = rec.QtyA,
+                    UnitPrice = rec.UnitPrice,
+                    ItemDiscountPcnt = rec.ItemDiscountPcnt,
+                    ItemDiscountValue = rec.ItemDiscountValue,
+                    NetValue = rec.NetValue,
+                    VatID = rec.VatID,
+                    VatValue = rec.VatValue,
+                    VatPcnt = rec.VatPcnt,
+                    TotalValue = rec.TotalValue,
+                    Comments = rec.Comments,
+                    UserID = rec.UserID
+                };
+            }
 
+            public static TrnServiceRow FromViewModel(this TrnServiceRow rec, vmTrnServiceRow vm)
+            {
+                rec.TrnServiceRowID = vm.TrnServiceRowID;
+                rec.TrnServiceHeaderID = vm.TrnServiceHeaderID;
+                rec.LineNumber = vm.LineNumber;
+                rec.ItemTypeID = vm.ItemTypeID;
+                rec.ItemID = vm.ItemID;
+                rec.QtyA = vm.QtyA;
+                rec.UnitPrice = vm.UnitPrice;
+                rec.ItemDiscountPcnt = vm.ItemDiscountPcnt;
+                rec.ItemDiscountValue = vm.ItemDiscountValue;
+                rec.NetValue = vm.NetValue;
+                rec.VatID = vm.VatID;
+                rec.VatValue = vm.VatValue;
+                rec.VatPcnt = vm.VatPcnt;
+                rec.TotalValue = vm.TotalValue;
+                rec.Comments = vm.Comments;
+                rec.UserID = vm.UserID;
+                rec.Date_Ins = DateTime.Now;
+                rec.Date_Upd = DateTime.Now;
+
+                return rec;
+            }
+        }
 
     }
 }

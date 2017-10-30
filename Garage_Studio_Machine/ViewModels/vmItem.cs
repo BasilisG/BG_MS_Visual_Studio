@@ -12,7 +12,7 @@ namespace ViewModels
         public string Code { get; set; }                            // ΚΩΔΙΚΟΣ
         public string Description { get; set; }                     // ΠΕΡΙΓΡΑΦΗ
         public Boolean isActive { get; set; }                       // ΕΙΝΑΙ ΕΝΕΡΓΟ
-        public Guid ItemTypeID { get; set; }                           // ΤΥΠΟΣ ΕΙΔΟΥΣ 1-ΚΑΝΟΝΙΚΟ , 2 - ΥΠΗΡΕΣΙΑ
+        public Guid ItemTypeID { get; set; }                        // ΤΥΠΟΣ ΕΙΔΟΥΣ 1-ΚΑΝΟΝΙΚΟ , 2 - ΥΠΗΡΕΣΙΑ
         public Guid UnitID { get; set; }                            // ID ΜΟΝΑΔΑΣ ΜΕΤΡΗΣΗΣ
         public Guid VatID { get; set; }                             // ID ΚΑΤΗΓΟΡΙΑΣ ΦΠΑ
         public double CostPrice { get; set; }                       // ΤΙΜΗ ΚΟΣΤΟΥΣ ΑΝΑΦΟΡΑΣ
