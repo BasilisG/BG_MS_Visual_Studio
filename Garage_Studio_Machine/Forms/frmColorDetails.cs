@@ -74,7 +74,7 @@ public vmColor RecMain { get; set; }
         private bool LoadData()
         {
             int x = 1;
-            //TODO  1111
+            
             var ans = new ColorControllers();
 
             if (ans == null) return false;

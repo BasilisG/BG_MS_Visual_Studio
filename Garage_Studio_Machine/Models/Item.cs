@@ -63,6 +63,9 @@ namespace Models
         public Unit Unit { get; set; }
         public Vat Vat { get; set; }
         public ItemType ItemType { get; set; }
+
+        // 1:N Relation [Navigation]
+        public virtual ICollection<TrnServiceRow> TrnServiceRows { get; set; }
     }
 
     public static class ItemExtensions
@@ -101,35 +104,36 @@ namespace Models
         }
 
         public static Item FromViewModel(this Item rec, vmItem vm)
-        {
-                rec.ItemID = vm.ItemID;
-                rec.Code = vm.Code;
-                rec.Description = vm.Description;
-                rec.isActive = vm.isActive;
-                rec.ItemTypeID = vm.ItemTypeID;
-                rec.UnitID = vm.UnitID;
-                rec.VatID = vm.VatID;
-                rec.CostPrice = vm.CostPrice;
-                rec.LastCostPrice = vm.LastCostPrice;
-                rec.GrossPrice = vm.GrossPrice;
-                rec.RetailPrice = vm.RetailPrice;
-                rec.Pricce2 = vm.Pricce2;
-                rec.Pricce3 = vm.Pricce3;
-                rec.Pricce4 = vm.Pricce4;
-                rec.Pricce5 = vm.Pricce5;
-                rec.ItemDiscount = vm.ItemDiscount;
-                rec.ItemMaxDiscount = vm.ItemMaxDiscount;
-                rec.Comments = vm.Comments;
-                rec.AlertMessage = vm.AlertMessage;
-                rec.BrandNameID = vm.BrandNameID;
-                rec.GroupCode = vm.GroupCode;
-                rec.RefCode = vm.RefCode;
-                rec.Barcode1 = vm.Barcode1;
-                rec.Barcode2 = vm.Barcode2;
-                rec.Barcode3 = vm.Barcode3;
-                rec.UserID = vm.UserID;
-                rec.Date_Ins = DateTime.Now;
-                rec.Date_Upd = DateTime.Now;
+        {  
+            rec.ItemID = vm.ItemID;
+            rec.Code = vm.Code;
+            rec.Description = vm.Description;
+            rec.isActive = vm.isActive;
+            rec.ItemTypeID = vm.ItemTypeID;
+            rec.UnitID = vm.UnitID;
+            rec.VatID = vm.VatID;
+            rec.CostPrice = vm.CostPrice;
+            rec.LastCostPrice = vm.LastCostPrice;
+            rec.GrossPrice = vm.GrossPrice;
+            rec.RetailPrice = vm.RetailPrice;
+            rec.Pricce2 = vm.Pricce2;
+            rec.Pricce3 = vm.Pricce3;
+            rec.Pricce4 = vm.Pricce4;
+            rec.Pricce5 = vm.Pricce5;
+            rec.ItemDiscount = vm.ItemDiscount;
+            rec.ItemMaxDiscount = vm.ItemMaxDiscount;
+            rec.Comments = vm.Comments;
+            rec.AlertMessage = vm.AlertMessage;
+            rec.BrandNameID = vm.BrandNameID;
+            rec.GroupCode = vm.GroupCode;
+            rec.RefCode = vm.RefCode;
+            rec.Barcode1 = vm.Barcode1;
+            rec.Barcode2 = vm.Barcode2;
+            rec.Barcode3 = vm.Barcode3;
+            rec.UserID = vm.UserID;
+            rec.Date_Ins = DateTime.Now;
+            rec.Date_Upd = DateTime.Now;
+
             return rec;
         }
 

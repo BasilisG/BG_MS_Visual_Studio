@@ -35,6 +35,8 @@ namespace Models
         public DbSet<Color> Colors { get; set; }
         public DbSet<VehicleType> VehicleTypes { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<TrnServiceHeader> TrnServiceHeaders { get; set; }
+        public DbSet<TrnServiceRow> TrnServiceRows { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

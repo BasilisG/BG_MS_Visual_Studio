@@ -38,10 +38,13 @@ namespace Models
 
         // 1:1 Relation [Navigation]
         public virtual Customer Customer { get; set; }     
-        public virtual Vehicle Vehicle { get; set; }        		
+        public virtual Vehicle Vehicle { get; set; }
+
+        // 1:N Relation [Navigation]
+        public virtual ICollection<TrnServiceRow> TrnServiceRows { get; set; }
     }
     
-    /*
+    
 	public static class TrnServiceHeaderExtensions
     {
 		public static vmTrnServiceHeader ToViewModel(this TrnServiceHeader rec)
@@ -64,10 +67,20 @@ namespace Models
 		public static TrnServiceHeader FromViewModel(this TrnServiceHeader rec, vmTrnServiceHeader vm)
         {
 
+            rec.TrnServiceHeaderID = vm.TrnServiceHeaderID;
+			rec.DateTrnIssue = vm.DateTrnIssue;
+			rec.DateTrnIn = vm.DateTrnIn;
+			rec.DateTrnOut = vm.DateTrnOut;
+			rec.DateTrnPrint = vm.DateTrnPrint;
+			rec.CustomerID = vm.CustomerID;
+			rec.VehicleID = vm.VehicleID;
+			rec.Kilometers = vm.Kilometers;
+			rec.Comments = vm.Comments;
+            rec.UserID = vm.UserID;
 
             return rec;
         }
 	}
 
-	*/
+	
 }

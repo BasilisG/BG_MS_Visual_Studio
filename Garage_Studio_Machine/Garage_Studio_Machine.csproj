@@ -190,6 +190,14 @@
     <Compile Include="Migrations\201708041629443_Initial.Designer.cs">
       <DependentUpon>201708041629443_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710301918192_Garage_Studio_Machine_CF.cs" />
+    <Compile Include="Migrations\201710301918192_Garage_Studio_Machine_CF.Designer.cs">
+      <DependentUpon>201710301918192_Garage_Studio_Machine_CF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710301920400_Garage_Studio_Machine_CF1.cs" />
+    <Compile Include="Migrations\201710301920400_Garage_Studio_Machine_CF1.Designer.cs">
+      <DependentUpon>201710301920400_Garage_Studio_Machine_CF1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Color.cs" />
@@ -197,6 +205,7 @@
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ItemType.cs" />
     <Compile Include="Models\Proffesion.cs" />
+    <Compile Include="Models\TrnServiceRow.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\Vat.cs" />
     <Compile Include="Models\Vehicle.cs" />
@@ -266,6 +275,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708041629443_Initial.resx">
       <DependentUpon>201708041629443_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710301918192_Garage_Studio_Machine_CF.resx">
+      <DependentUpon>201710301918192_Garage_Studio_Machine_CF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710301920400_Garage_Studio_Machine_CF1.resx">
+      <DependentUpon>201710301920400_Garage_Studio_Machine_CF1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

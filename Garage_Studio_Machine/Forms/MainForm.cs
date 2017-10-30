@@ -92,6 +92,11 @@ namespace ViewModels
             }
         }
 
+        private void serviceTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }
