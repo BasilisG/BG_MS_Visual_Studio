@@ -43,6 +43,7 @@ namespace Models
         // 1:1 Relation [Navigation]
         public virtual TrnServiceHeader TrnServiceHeader { get; set; }
         public virtual Item Item { get; set; }
+        }
 
         public static class TrnServiceRowExtensions
         {
@@ -94,5 +95,5 @@ namespace Models
             }
         }
 
-    }
+   
 }
